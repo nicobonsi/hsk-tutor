@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "按时",
+    "traditional": "按時",
+    "pinyin": "ànshí",
+    "pinyinTones": "àn shí",
+    "definitions": ["on time", "on schedule"],
+    "tags": ["adverb", "time"],
+    "frequencyRank": 601
+  },
+  {
+    "simplified": "包括",
+    "traditional": "包括",
+    "pinyin": "bāokuò",
+    "pinyinTones": "bāo kuò",
+    "definitions": ["to include", "to encompass", "including"],
+    "tags": ["verb"],
+    "frequencyRank": 602
+  },
+  {
+    "simplified": "保护",
+    "traditional": "保護",
+    "pinyin": "bǎohù",
+    "pinyinTones": "bǎo hù",
+    "definitions": ["to protect", "protection"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 603
+  },
+  {
+    "simplified": "比较",
+    "traditional": "比較",
+    "pinyin": "bǐjiào",
+    "pinyinTones": "bǐ jiào",
+    "definitions": ["to compare", "relatively", "comparatively"],
+    "tags": ["verb", "adverb"],
+    "frequencyRank": 604
+  },
+  {
+    "simplified": "表示",
+    "traditional": "表示",
+    "pinyin": "biǎoshì",
+    "pinyinTones": "biǎo shì",
+    "definitions": ["to express", "to indicate", "to mean"],
+    "tags": ["verb"],
+    "frequencyRank": 605
+  },
+  {
+    "simplified": "参加",
+    "traditional": "參加",
+    "pinyin": "cānjiā",
+    "pinyinTones": "cān jiā",
+    "definitions": ["to participate", "to join", "to attend"],
+    "tags": ["verb"],
+    "frequencyRank": 606
+  },
+  {
+    "simplified": "成功",
+    "traditional": "成功",
+    "pinyin": "chénggōng",
+    "pinyinTones": "chéng gōng",
+    "definitions": ["to succeed", "success", "successful"],
+    "tags": ["verb", "noun", "adjective"],
+    "frequencyRank": 607
+  },
+  {
+    "simplified": "当时",
+    "traditional": "當時",
+    "pinyin": "dāngshí",
+    "pinyinTones": "dāng shí",
+    "definitions": ["at that time", "then", "at the time"],
+    "tags": ["noun", "time"],
+    "frequencyRank": 608
+  },
+  {
+    "simplified": "发现",
+    "traditional": "發現",
+    "pinyin": "fāxiàn",
+    "pinyinTones": "fā xiàn",
+    "definitions": ["to discover", "to find", "discovery"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 609
+  },
+  {
+    "simplified": "方面",
+    "traditional": "方面",
+    "pinyin": "fāngmiàn",
+    "pinyinTones": "fāng miàn",
+    "definitions": ["aspect", "respect", "side"],
+    "tags": ["noun"],
+    "frequencyRank": 610
+  },
+  {
+    "simplified": "分析",
+    "traditional": "分析",
+    "pinyin": "fēnxī",
+    "pinyinTones": "fēn xī",
+    "definitions": ["to analyze", "analysis"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 611
+  },
+  {
+    "simplified": "复杂",
+    "traditional": "複雜",
+    "pinyin": "fùzá",
+    "pinyinTones": "fù zá",
+    "definitions": ["complex", "complicated"],
+    "tags": ["adjective"],
+    "frequencyRank": 612
+  },
+  {
+    "simplified": "改变",
+    "traditional": "改變",
+    "pinyin": "gǎibiàn",
+    "pinyinTones": "gǎi biàn",
+    "definitions": ["to change", "to alter", "change"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 613
+  },
+  {
+    "simplified": "感情",
+    "traditional": "感情",
+    "pinyin": "gǎnqíng",
+    "pinyinTones": "gǎn qíng",
+    "definitions": ["emotion", "feeling", "affection"],
+    "tags": ["noun"],
+    "frequencyRank": 614
+  },
+  {
+    "simplified": "共同",
+    "traditional": "共同",
+    "pinyin": "gòngtóng",
+    "pinyinTones": "gòng tóng",
+    "definitions": ["common", "joint", "together"],
+    "tags": ["adjective", "adverb"],
+    "frequencyRank": 615
+  },
+  {
+    "simplified": "积极",
+    "traditional": "積極",
+    "pinyin": "jījí",
+    "pinyinTones": "jī jí",
+    "definitions": ["positive", "active", "enthusiastic"],
+    "tags": ["adjective"],
+    "frequencyRank": 616
+  },
+  {
+    "simplified": "经济",
+    "traditional": "經濟",
+    "pinyin": "jīngjì",
+    "pinyinTones": "jīng jì",
+    "definitions": ["economy", "economic"],
+    "tags": ["noun", "adjective"],
+    "frequencyRank": 617
+  },
+  {
+    "simplified": "竞争",
+    "traditional": "競爭",
+    "pinyin": "jìngzhēng",
+    "pinyinTones": "jìng zhēng",
+    "definitions": ["to compete", "competition"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 618
+  },
+  {
+    "simplified": "困难",
+    "traditional": "困難",
+    "pinyin": "kùnnán",
+    "pinyinTones": "kùn nán",
+    "definitions": ["difficulty", "difficult", "hard"],
+    "tags": ["noun", "adjective"],
+    "frequencyRank": 619
+  },
+  {
+    "simplified": "礼貌",
+    "traditional": "禮貌",
+    "pinyin": "lǐmào",
+    "pinyinTones": "lǐ mào",
+    "definitions": ["politeness", "courtesy", "polite"],
+    "tags": ["noun", "adjective"],
+    "frequencyRank": 620
+  },
+  {
+    "simplified": "目的",
+    "traditional": "目的",
+    "pinyin": "mùdì",
+    "pinyinTones": "mù dì",
+    "definitions": ["purpose", "goal", "objective"],
+    "tags": ["noun"],
+    "frequencyRank": 621
+  },
+  {
+    "simplified": "努力",
+    "traditional": "努力",
+    "pinyin": "nǔlì",
+    "pinyinTones": "nǔ lì",
+    "definitions": ["to work hard", "effort", "diligent"],
+    "tags": ["verb", "noun", "adjective"],
+    "frequencyRank": 622
+  },
+  {
+    "simplified": "顺利",
+    "traditional": "順利",
+    "pinyin": "shùnlì",
+    "pinyinTones": "shùn lì",
+    "definitions": ["smoothly", "successfully", "without difficulty"],
+    "tags": ["adjective", "adverb"],
+    "frequencyRank": 623
+  },
+  {
+    "simplified": "态度",
+    "traditional": "態度",
+    "pinyin": "tàidu",
+    "pinyinTones": "tài du",
+    "definitions": ["attitude", "manner"],
+    "tags": ["noun"],
+    "frequencyRank": 624
+  },
+  {
+    "simplified": "通过",
+    "traditional": "通過",
+    "pinyin": "tōngguò",
+    "pinyinTones": "tōng guò",
+    "definitions": ["to pass", "through", "by means of"],
+    "tags": ["verb", "preposition"],
+    "frequencyRank": 625
+  },
+  {
+    "simplified": "往往",
+    "traditional": "往往",
+    "pinyin": "wǎngwǎng",
+    "pinyinTones": "wǎng wǎng",
+    "definitions": ["often", "frequently", "more often than not"],
+    "tags": ["adverb"],
+    "frequencyRank": 626
+  },
+  {
+    "simplified": "现代",
+    "traditional": "現代",
+    "pinyin": "xiàndài",
+    "pinyinTones": "xiàn dài",
+    "definitions": ["modern", "contemporary", "modern times"],
+    "tags": ["noun", "adjective", "time"],
+    "frequencyRank": 627
+  },
+  {
+    "simplified": "影响",
+    "traditional": "影響",
+    "pinyin": "yǐngxiǎng",
+    "pinyinTones": "yǐng xiǎng",
+    "definitions": ["to influence", "to affect", "influence"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 628
+  },
+  {
+    "simplified": "优点",
+    "traditional": "優點",
+    "pinyin": "yōudiǎn",
+    "pinyinTones": "yōu diǎn",
+    "definitions": ["advantage", "merit", "strong point"],
+    "tags": ["noun"],
+    "frequencyRank": 629
+  },
+  {
+    "simplified": "逐渐",
+    "traditional": "逐漸",
+    "pinyin": "zhújiàn",
+    "pinyinTones": "zhú jiàn",
+    "definitions": ["gradually", "little by little"],
+    "tags": ["adverb"],
+    "frequencyRank": 630
+  }
+]

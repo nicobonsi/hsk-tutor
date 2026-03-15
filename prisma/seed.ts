@@ -3,6 +3,10 @@ import { PrismaPg } from '@prisma/adapter-pg'
 import * as dotenv from 'dotenv'
 import hsk1 from './data/hsk1.json'
 import hsk2 from './data/hsk2.json'
+import hsk3 from './data/hsk3.json'
+import hsk4 from './data/hsk4.json'
+import hsk5 from './data/hsk5.json'
+import hsk6 from './data/hsk6.json'
 import achievementsData from './data/achievements.json'
 
 dotenv.config({ path: '.env.local' })
@@ -45,6 +49,70 @@ async function main() {
     })),
   })
   console.log(`Seeded ${hsk2.length} HSK Level 2 words.`)
+
+  // Seed HSK Level 3 words
+  await prisma.hskWord.deleteMany({ where: { level: 3 } })
+  await prisma.hskWord.createMany({
+    data: hsk3.map((word) => ({
+      level: 3,
+      simplified: word.simplified,
+      traditional: word.traditional,
+      pinyin: word.pinyin,
+      pinyinTones: word.pinyinTones,
+      definitions: word.definitions,
+      tags: word.tags,
+      frequencyRank: word.frequencyRank,
+    })),
+  })
+  console.log(`Seeded ${hsk3.length} HSK Level 3 words.`)
+
+  // Seed HSK Level 4 words
+  await prisma.hskWord.deleteMany({ where: { level: 4 } })
+  await prisma.hskWord.createMany({
+    data: hsk4.map((word) => ({
+      level: 4,
+      simplified: word.simplified,
+      traditional: word.traditional,
+      pinyin: word.pinyin,
+      pinyinTones: word.pinyinTones,
+      definitions: word.definitions,
+      tags: word.tags,
+      frequencyRank: word.frequencyRank,
+    })),
+  })
+  console.log(`Seeded ${hsk4.length} HSK Level 4 words.`)
+
+  // Seed HSK Level 5 words
+  await prisma.hskWord.deleteMany({ where: { level: 5 } })
+  await prisma.hskWord.createMany({
+    data: hsk5.map((word) => ({
+      level: 5,
+      simplified: word.simplified,
+      traditional: word.traditional,
+      pinyin: word.pinyin,
+      pinyinTones: word.pinyinTones,
+      definitions: word.definitions,
+      tags: word.tags,
+      frequencyRank: word.frequencyRank,
+    })),
+  })
+  console.log(`Seeded ${hsk5.length} HSK Level 5 words.`)
+
+  // Seed HSK Level 6 words
+  await prisma.hskWord.deleteMany({ where: { level: 6 } })
+  await prisma.hskWord.createMany({
+    data: hsk6.map((word) => ({
+      level: 6,
+      simplified: word.simplified,
+      traditional: word.traditional,
+      pinyin: word.pinyin,
+      pinyinTones: word.pinyinTones,
+      definitions: word.definitions,
+      tags: word.tags,
+      frequencyRank: word.frequencyRank,
+    })),
+  })
+  console.log(`Seeded ${hsk6.length} HSK Level 6 words.`)
 
   // Seed achievements — upsert so existing records are preserved/updated
   console.log('Seeding achievements...')

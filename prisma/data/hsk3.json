@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "爱好",
+    "traditional": "愛好",
+    "pinyin": "àihào",
+    "pinyinTones": "ài hào",
+    "definitions": ["hobby", "interest", "to love"],
+    "tags": ["noun", "verb"],
+    "frequencyRank": 301
+  },
+  {
+    "simplified": "必须",
+    "traditional": "必須",
+    "pinyin": "bìxū",
+    "pinyinTones": "bì xū",
+    "definitions": ["must", "have to"],
+    "tags": ["adverb", "modal"],
+    "frequencyRank": 302
+  },
+  {
+    "simplified": "超市",
+    "traditional": "超市",
+    "pinyin": "chāoshì",
+    "pinyinTones": "chāo shì",
+    "definitions": ["supermarket"],
+    "tags": ["noun", "place"],
+    "frequencyRank": 303
+  },
+  {
+    "simplified": "城市",
+    "traditional": "城市",
+    "pinyin": "chéngshì",
+    "pinyinTones": "chéng shì",
+    "definitions": ["city", "town"],
+    "tags": ["noun", "place"],
+    "frequencyRank": 304
+  },
+  {
+    "simplified": "打算",
+    "traditional": "打算",
+    "pinyin": "dǎsuàn",
+    "pinyinTones": "dǎ suàn",
+    "definitions": ["to plan", "to intend", "plan"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 305
+  },
+  {
+    "simplified": "地图",
+    "traditional": "地圖",
+    "pinyin": "dìtú",
+    "pinyinTones": "dì tú",
+    "definitions": ["map"],
+    "tags": ["noun"],
+    "frequencyRank": 306
+  },
+  {
+    "simplified": "附近",
+    "traditional": "附近",
+    "pinyin": "fùjìn",
+    "pinyinTones": "fù jìn",
+    "definitions": ["nearby", "vicinity", "neighboring"],
+    "tags": ["noun", "adjective"],
+    "frequencyRank": 307
+  },
+  {
+    "simplified": "复习",
+    "traditional": "復習",
+    "pinyin": "fùxí",
+    "pinyinTones": "fù xí",
+    "definitions": ["to review", "to revise"],
+    "tags": ["verb"],
+    "frequencyRank": 308
+  },
+  {
+    "simplified": "关系",
+    "traditional": "關係",
+    "pinyin": "guānxi",
+    "pinyinTones": "guān xi",
+    "definitions": ["relationship", "relation", "to concern"],
+    "tags": ["noun", "verb"],
+    "frequencyRank": 309
+  },
+  {
+    "simplified": "护照",
+    "traditional": "護照",
+    "pinyin": "hùzhào",
+    "pinyinTones": "hù zhào",
+    "definitions": ["passport"],
+    "tags": ["noun"],
+    "frequencyRank": 310
+  },
+  {
+    "simplified": "环境",
+    "traditional": "環境",
+    "pinyin": "huánjìng",
+    "pinyinTones": "huán jìng",
+    "definitions": ["environment", "surroundings"],
+    "tags": ["noun"],
+    "frequencyRank": 311
+  },
+  {
+    "simplified": "换",
+    "traditional": "換",
+    "pinyin": "huàn",
+    "pinyinTones": "huàn",
+    "definitions": ["to change", "to exchange", "to swap"],
+    "tags": ["verb"],
+    "frequencyRank": 312
+  },
+  {
+    "simplified": "回答",
+    "traditional": "回答",
+    "pinyin": "huídá",
+    "pinyinTones": "huí dá",
+    "definitions": ["to answer", "to reply", "answer"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 313
+  },
+  {
+    "simplified": "季节",
+    "traditional": "季節",
+    "pinyin": "jìjié",
+    "pinyinTones": "jì jié",
+    "definitions": ["season"],
+    "tags": ["noun", "time"],
+    "frequencyRank": 314
+  },
+  {
+    "simplified": "检查",
+    "traditional": "檢查",
+    "pinyin": "jiǎnchá",
+    "pinyinTones": "jiǎn chá",
+    "definitions": ["to check", "to inspect", "examination"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 315
+  },
+  {
+    "simplified": "借",
+    "traditional": "借",
+    "pinyin": "jiè",
+    "pinyinTones": "jiè",
+    "definitions": ["to borrow", "to lend", "by means of"],
+    "tags": ["verb"],
+    "frequencyRank": 316
+  },
+  {
+    "simplified": "经常",
+    "traditional": "經常",
+    "pinyin": "jīngcháng",
+    "pinyinTones": "jīng cháng",
+    "definitions": ["frequently", "often", "regularly"],
+    "tags": ["adverb"],
+    "frequencyRank": 317
+  },
+  {
+    "simplified": "举行",
+    "traditional": "舉行",
+    "pinyin": "jǔxíng",
+    "pinyinTones": "jǔ xíng",
+    "definitions": ["to hold (a meeting/event)", "to take place"],
+    "tags": ["verb"],
+    "frequencyRank": 318
+  },
+  {
+    "simplified": "离开",
+    "traditional": "離開",
+    "pinyin": "líkāi",
+    "pinyinTones": "lí kāi",
+    "definitions": ["to leave", "to depart from"],
+    "tags": ["verb"],
+    "frequencyRank": 319
+  },
+  {
+    "simplified": "历史",
+    "traditional": "歷史",
+    "pinyin": "lìshǐ",
+    "pinyinTones": "lì shǐ",
+    "definitions": ["history"],
+    "tags": ["noun"],
+    "frequencyRank": 320
+  },
+  {
+    "simplified": "聊天",
+    "traditional": "聊天",
+    "pinyin": "liáotiān",
+    "pinyinTones": "liáo tiān",
+    "definitions": ["to chat", "to have a conversation"],
+    "tags": ["verb"],
+    "frequencyRank": 321
+  },
+  {
+    "simplified": "马上",
+    "traditional": "馬上",
+    "pinyin": "mǎshàng",
+    "pinyinTones": "mǎ shàng",
+    "definitions": ["immediately", "right away", "at once"],
+    "tags": ["adverb"],
+    "frequencyRank": 322
+  },
+  {
+    "simplified": "普通话",
+    "traditional": "普通話",
+    "pinyin": "pǔtōnghuà",
+    "pinyinTones": "pǔ tōng huà",
+    "definitions": ["Mandarin Chinese", "Putonghua"],
+    "tags": ["noun", "language"],
+    "frequencyRank": 323
+  },
+  {
+    "simplified": "其实",
+    "traditional": "其實",
+    "pinyin": "qíshí",
+    "pinyinTones": "qí shí",
+    "definitions": ["actually", "in fact", "as a matter of fact"],
+    "tags": ["adverb"],
+    "frequencyRank": 324
+  },
+  {
+    "simplified": "认为",
+    "traditional": "認為",
+    "pinyin": "rènwéi",
+    "pinyinTones": "rèn wéi",
+    "definitions": ["to think", "to believe", "to consider"],
+    "tags": ["verb"],
+    "frequencyRank": 325
+  },
+  {
+    "simplified": "声音",
+    "traditional": "聲音",
+    "pinyin": "shēngyīn",
+    "pinyinTones": "shēng yīn",
+    "definitions": ["sound", "voice"],
+    "tags": ["noun"],
+    "frequencyRank": 326
+  },
+  {
+    "simplified": "突然",
+    "traditional": "突然",
+    "pinyin": "tūrán",
+    "pinyinTones": "tū rán",
+    "definitions": ["suddenly", "unexpectedly", "abrupt"],
+    "tags": ["adverb", "adjective"],
+    "frequencyRank": 327
+  },
+  {
+    "simplified": "同意",
+    "traditional": "同意",
+    "pinyin": "tóngyì",
+    "pinyinTones": "tóng yì",
+    "definitions": ["to agree", "to consent", "to approve"],
+    "tags": ["verb"],
+    "frequencyRank": 328
+  },
+  {
+    "simplified": "已经",
+    "traditional": "已經",
+    "pinyin": "yǐjīng",
+    "pinyinTones": "yǐ jīng",
+    "definitions": ["already"],
+    "tags": ["adverb"],
+    "frequencyRank": 329
+  },
+  {
+    "simplified": "用",
+    "traditional": "用",
+    "pinyin": "yòng",
+    "pinyinTones": "yòng",
+    "definitions": ["to use", "with", "by means of"],
+    "tags": ["verb", "preposition"],
+    "frequencyRank": 330
+  }
+]

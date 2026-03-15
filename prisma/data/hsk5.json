@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "把握",
+    "traditional": "把握",
+    "pinyin": "bǎwò",
+    "pinyinTones": "bǎ wò",
+    "definitions": ["to grasp", "to have confidence", "certainty"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1301
+  },
+  {
+    "simplified": "保障",
+    "traditional": "保障",
+    "pinyin": "bǎozhàng",
+    "pinyinTones": "bǎo zhàng",
+    "definitions": ["to guarantee", "to safeguard", "guarantee"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1302
+  },
+  {
+    "simplified": "辩论",
+    "traditional": "辯論",
+    "pinyin": "biànlùn",
+    "pinyinTones": "biàn lùn",
+    "definitions": ["to debate", "debate"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1303
+  },
+  {
+    "simplified": "彻底",
+    "traditional": "徹底",
+    "pinyin": "chèdǐ",
+    "pinyinTones": "chè dǐ",
+    "definitions": ["thorough", "thoroughly", "complete"],
+    "tags": ["adjective", "adverb"],
+    "frequencyRank": 1304
+  },
+  {
+    "simplified": "承担",
+    "traditional": "承擔",
+    "pinyin": "chéngdān",
+    "pinyinTones": "chéng dān",
+    "definitions": ["to bear", "to undertake", "to shoulder"],
+    "tags": ["verb"],
+    "frequencyRank": 1305
+  },
+  {
+    "simplified": "充分",
+    "traditional": "充分",
+    "pinyin": "chōngfèn",
+    "pinyinTones": "chōng fèn",
+    "definitions": ["sufficient", "ample", "fully"],
+    "tags": ["adjective", "adverb"],
+    "frequencyRank": 1306
+  },
+  {
+    "simplified": "传统",
+    "traditional": "傳統",
+    "pinyin": "chuántǒng",
+    "pinyinTones": "chuán tǒng",
+    "definitions": ["tradition", "traditional"],
+    "tags": ["noun", "adjective"],
+    "frequencyRank": 1307
+  },
+  {
+    "simplified": "促进",
+    "traditional": "促進",
+    "pinyin": "cùjìn",
+    "pinyinTones": "cù jìn",
+    "definitions": ["to promote", "to advance", "to boost"],
+    "tags": ["verb"],
+    "frequencyRank": 1308
+  },
+  {
+    "simplified": "存在",
+    "traditional": "存在",
+    "pinyin": "cúnzài",
+    "pinyinTones": "cún zài",
+    "definitions": ["to exist", "existence"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1309
+  },
+  {
+    "simplified": "发挥",
+    "traditional": "發揮",
+    "pinyin": "fāhuī",
+    "pinyinTones": "fā huī",
+    "definitions": ["to develop", "to bring into play", "to give free rein to"],
+    "tags": ["verb"],
+    "frequencyRank": 1310
+  },
+  {
+    "simplified": "丰富",
+    "traditional": "豐富",
+    "pinyin": "fēngfù",
+    "pinyinTones": "fēng fù",
+    "definitions": ["rich", "abundant", "to enrich"],
+    "tags": ["adjective", "verb"],
+    "frequencyRank": 1311
+  },
+  {
+    "simplified": "概念",
+    "traditional": "概念",
+    "pinyin": "gàiniàn",
+    "pinyinTones": "gài niàn",
+    "definitions": ["concept", "notion", "idea"],
+    "tags": ["noun"],
+    "frequencyRank": 1312
+  },
+  {
+    "simplified": "贡献",
+    "traditional": "貢獻",
+    "pinyin": "gòngxiàn",
+    "pinyinTones": "gòng xiàn",
+    "definitions": ["to contribute", "contribution"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1313
+  },
+  {
+    "simplified": "观点",
+    "traditional": "觀點",
+    "pinyin": "guāndiǎn",
+    "pinyinTones": "guān diǎn",
+    "definitions": ["viewpoint", "point of view", "standpoint"],
+    "tags": ["noun"],
+    "frequencyRank": 1314
+  },
+  {
+    "simplified": "规律",
+    "traditional": "規律",
+    "pinyin": "guīlǜ",
+    "pinyinTones": "guī lǜ",
+    "definitions": ["rule", "law", "regular pattern"],
+    "tags": ["noun"],
+    "frequencyRank": 1315
+  },
+  {
+    "simplified": "忽视",
+    "traditional": "忽視",
+    "pinyin": "hūshì",
+    "pinyinTones": "hū shì",
+    "definitions": ["to ignore", "to neglect", "to overlook"],
+    "tags": ["verb"],
+    "frequencyRank": 1316
+  },
+  {
+    "simplified": "尽管",
+    "traditional": "儘管",
+    "pinyin": "jǐnguǎn",
+    "pinyinTones": "jǐn guǎn",
+    "definitions": ["despite", "even though", "although"],
+    "tags": ["conjunction"],
+    "frequencyRank": 1317
+  },
+  {
+    "simplified": "竟然",
+    "traditional": "竟然",
+    "pinyin": "jìngrán",
+    "pinyinTones": "jìng rán",
+    "definitions": ["unexpectedly", "actually", "to one's surprise"],
+    "tags": ["adverb"],
+    "frequencyRank": 1318
+  },
+  {
+    "simplified": "理论",
+    "traditional": "理論",
+    "pinyin": "lǐlùn",
+    "pinyinTones": "lǐ lùn",
+    "definitions": ["theory", "theoretical"],
+    "tags": ["noun"],
+    "frequencyRank": 1319
+  },
+  {
+    "simplified": "逻辑",
+    "traditional": "邏輯",
+    "pinyin": "luójí",
+    "pinyinTones": "luó jí",
+    "definitions": ["logic"],
+    "tags": ["noun"],
+    "frequencyRank": 1320
+  },
+  {
+    "simplified": "培养",
+    "traditional": "培養",
+    "pinyin": "péiyǎng",
+    "pinyinTones": "péi yǎng",
+    "definitions": ["to cultivate", "to foster", "to train"],
+    "tags": ["verb"],
+    "frequencyRank": 1321
+  },
+  {
+    "simplified": "批评",
+    "traditional": "批評",
+    "pinyin": "pīpíng",
+    "pinyinTones": "pī píng",
+    "definitions": ["to criticize", "criticism"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1322
+  },
+  {
+    "simplified": "启发",
+    "traditional": "啟發",
+    "pinyin": "qǐfā",
+    "pinyinTones": "qǐ fā",
+    "definitions": ["to inspire", "to enlighten", "inspiration"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 1323
+  },
+  {
+    "simplified": "强调",
+    "traditional": "強調",
+    "pinyin": "qiángdiào",
+    "pinyinTones": "qiáng diào",
+    "definitions": ["to emphasize", "to stress"],
+    "tags": ["verb"],
+    "frequencyRank": 1324
+  },
+  {
+    "simplified": "实践",
+    "traditional": "實踐",
+    "pinyin": "shíjiàn",
+    "pinyinTones": "shí jiàn",
+    "definitions": ["practice", "to practice", "to carry out"],
+    "tags": ["noun", "verb"],
+    "frequencyRank": 1325
+  },
+  {
+    "simplified": "推广",
+    "traditional": "推廣",
+    "pinyin": "tuīguǎng",
+    "pinyinTones": "tuī guǎng",
+    "definitions": ["to spread", "to popularize", "to promote"],
+    "tags": ["verb"],
+    "frequencyRank": 1326
+  },
+  {
+    "simplified": "无论",
+    "traditional": "無論",
+    "pinyin": "wúlùn",
+    "pinyinTones": "wú lùn",
+    "definitions": ["no matter what", "regardless of", "whether"],
+    "tags": ["conjunction"],
+    "frequencyRank": 1327
+  },
+  {
+    "simplified": "现象",
+    "traditional": "現象",
+    "pinyin": "xiànxiàng",
+    "pinyinTones": "xiàn xiàng",
+    "definitions": ["phenomenon", "appearance"],
+    "tags": ["noun"],
+    "frequencyRank": 1328
+  },
+  {
+    "simplified": "意义",
+    "traditional": "意義",
+    "pinyin": "yìyì",
+    "pinyinTones": "yì yì",
+    "definitions": ["meaning", "significance", "sense"],
+    "tags": ["noun"],
+    "frequencyRank": 1329
+  },
+  {
+    "simplified": "智慧",
+    "traditional": "智慧",
+    "pinyin": "zhìhuì",
+    "pinyinTones": "zhì huì",
+    "definitions": ["wisdom", "intelligence"],
+    "tags": ["noun"],
+    "frequencyRank": 1330
+  }
+]

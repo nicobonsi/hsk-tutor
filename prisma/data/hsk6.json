@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "阐述",
+    "traditional": "闡述",
+    "pinyin": "chǎnshù",
+    "pinyinTones": "chǎn shù",
+    "definitions": ["to expound", "to elaborate", "to set forth"],
+    "tags": ["verb"],
+    "frequencyRank": 2501
+  },
+  {
+    "simplified": "倡导",
+    "traditional": "倡導",
+    "pinyin": "chàngdǎo",
+    "pinyinTones": "chàng dǎo",
+    "definitions": ["to advocate", "to promote", "to champion"],
+    "tags": ["verb"],
+    "frequencyRank": 2502
+  },
+  {
+    "simplified": "抽象",
+    "traditional": "抽象",
+    "pinyin": "chōuxiàng",
+    "pinyinTones": "chōu xiàng",
+    "definitions": ["abstract", "abstraction"],
+    "tags": ["adjective", "noun"],
+    "frequencyRank": 2503
+  },
+  {
+    "simplified": "独特",
+    "traditional": "獨特",
+    "pinyin": "dútè",
+    "pinyinTones": "dú tè",
+    "definitions": ["unique", "distinctive", "peculiar"],
+    "tags": ["adjective"],
+    "frequencyRank": 2504
+  },
+  {
+    "simplified": "反映",
+    "traditional": "反映",
+    "pinyin": "fǎnyìng",
+    "pinyinTones": "fǎn yìng",
+    "definitions": ["to reflect", "to mirror", "to report"],
+    "tags": ["verb"],
+    "frequencyRank": 2505
+  },
+  {
+    "simplified": "否则",
+    "traditional": "否則",
+    "pinyin": "fǒuzé",
+    "pinyinTones": "fǒu zé",
+    "definitions": ["otherwise", "if not", "or else"],
+    "tags": ["conjunction"],
+    "frequencyRank": 2506
+  },
+  {
+    "simplified": "格局",
+    "traditional": "格局",
+    "pinyin": "géjú",
+    "pinyinTones": "gé jú",
+    "definitions": ["pattern", "structure", "situation"],
+    "tags": ["noun"],
+    "frequencyRank": 2507
+  },
+  {
+    "simplified": "观念",
+    "traditional": "觀念",
+    "pinyin": "guānniàn",
+    "pinyinTones": "guān niàn",
+    "definitions": ["concept", "idea", "notion"],
+    "tags": ["noun"],
+    "frequencyRank": 2508
+  },
+  {
+    "simplified": "规范",
+    "traditional": "規範",
+    "pinyin": "guīfàn",
+    "pinyinTones": "guī fàn",
+    "definitions": ["standard", "norm", "to standardize"],
+    "tags": ["noun", "verb"],
+    "frequencyRank": 2509
+  },
+  {
+    "simplified": "合理",
+    "traditional": "合理",
+    "pinyin": "hélǐ",
+    "pinyinTones": "hé lǐ",
+    "definitions": ["reasonable", "rational", "sensible"],
+    "tags": ["adjective"],
+    "frequencyRank": 2510
+  },
+  {
+    "simplified": "衡量",
+    "traditional": "衡量",
+    "pinyin": "héngliáng",
+    "pinyinTones": "héng liáng",
+    "definitions": ["to measure", "to weigh", "to evaluate"],
+    "tags": ["verb"],
+    "frequencyRank": 2511
+  },
+  {
+    "simplified": "加速",
+    "traditional": "加速",
+    "pinyin": "jiāsù",
+    "pinyinTones": "jiā sù",
+    "definitions": ["to accelerate", "to speed up"],
+    "tags": ["verb"],
+    "frequencyRank": 2512
+  },
+  {
+    "simplified": "阶段",
+    "traditional": "階段",
+    "pinyin": "jiēduàn",
+    "pinyinTones": "jiē duàn",
+    "definitions": ["stage", "phase", "period"],
+    "tags": ["noun", "time"],
+    "frequencyRank": 2513
+  },
+  {
+    "simplified": "借鉴",
+    "traditional": "借鑒",
+    "pinyin": "jièjiàn",
+    "pinyinTones": "jiè jiàn",
+    "definitions": ["to draw on", "to borrow from", "to use for reference"],
+    "tags": ["verb"],
+    "frequencyRank": 2514
+  },
+  {
+    "simplified": "精确",
+    "traditional": "精確",
+    "pinyin": "jīngquè",
+    "pinyinTones": "jīng què",
+    "definitions": ["precise", "exact", "accurate"],
+    "tags": ["adjective"],
+    "frequencyRank": 2515
+  },
+  {
+    "simplified": "理念",
+    "traditional": "理念",
+    "pinyin": "lǐniàn",
+    "pinyinTones": "lǐ niàn",
+    "definitions": ["concept", "philosophy", "idea"],
+    "tags": ["noun"],
+    "frequencyRank": 2516
+  },
+  {
+    "simplified": "面临",
+    "traditional": "面臨",
+    "pinyin": "miànlín",
+    "pinyinTones": "miàn lín",
+    "definitions": ["to face", "to confront", "to be faced with"],
+    "tags": ["verb"],
+    "frequencyRank": 2517
+  },
+  {
+    "simplified": "模式",
+    "traditional": "模式",
+    "pinyin": "móshì",
+    "pinyinTones": "mó shì",
+    "definitions": ["pattern", "model", "mode"],
+    "tags": ["noun"],
+    "frequencyRank": 2518
+  },
+  {
+    "simplified": "内涵",
+    "traditional": "內涵",
+    "pinyin": "nèihán",
+    "pinyinTones": "nèi hán",
+    "definitions": ["connotation", "content", "inner quality"],
+    "tags": ["noun"],
+    "frequencyRank": 2519
+  },
+  {
+    "simplified": "凝聚",
+    "traditional": "凝聚",
+    "pinyin": "níngjù",
+    "pinyinTones": "níng jù",
+    "definitions": ["to condense", "to cohere", "to concentrate"],
+    "tags": ["verb"],
+    "frequencyRank": 2520
+  },
+  {
+    "simplified": "契机",
+    "traditional": "契機",
+    "pinyin": "qìjī",
+    "pinyinTones": "qì jī",
+    "definitions": ["opportunity", "turning point", "occasion"],
+    "tags": ["noun"],
+    "frequencyRank": 2521
+  },
+  {
+    "simplified": "融合",
+    "traditional": "融合",
+    "pinyin": "rónghé",
+    "pinyinTones": "róng hé",
+    "definitions": ["to blend", "to integrate", "to fuse"],
+    "tags": ["verb"],
+    "frequencyRank": 2522
+  },
+  {
+    "simplified": "深刻",
+    "traditional": "深刻",
+    "pinyin": "shēnkè",
+    "pinyinTones": "shēn kè",
+    "definitions": ["profound", "deep", "intense"],
+    "tags": ["adjective"],
+    "frequencyRank": 2523
+  },
+  {
+    "simplified": "体现",
+    "traditional": "體現",
+    "pinyin": "tǐxiàn",
+    "pinyinTones": "tǐ xiàn",
+    "definitions": ["to embody", "to reflect", "to manifest"],
+    "tags": ["verb"],
+    "frequencyRank": 2524
+  },
+  {
+    "simplified": "突破",
+    "traditional": "突破",
+    "pinyin": "tūpò",
+    "pinyinTones": "tū pò",
+    "definitions": ["to break through", "breakthrough"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 2525
+  },
+  {
+    "simplified": "维护",
+    "traditional": "維護",
+    "pinyin": "wéihù",
+    "pinyinTones": "wéi hù",
+    "definitions": ["to maintain", "to defend", "to uphold"],
+    "tags": ["verb"],
+    "frequencyRank": 2526
+  },
+  {
+    "simplified": "相互",
+    "traditional": "相互",
+    "pinyin": "xiānghù",
+    "pinyinTones": "xiāng hù",
+    "definitions": ["mutual", "mutually", "reciprocal"],
+    "tags": ["adverb", "adjective"],
+    "frequencyRank": 2527
+  },
+  {
+    "simplified": "形成",
+    "traditional": "形成",
+    "pinyin": "xíngchéng",
+    "pinyinTones": "xíng chéng",
+    "definitions": ["to form", "to take shape", "to develop"],
+    "tags": ["verb"],
+    "frequencyRank": 2528
+  },
+  {
+    "simplified": "整合",
+    "traditional": "整合",
+    "pinyin": "zhěnghé",
+    "pinyinTones": "zhěng hé",
+    "definitions": ["to integrate", "to consolidate", "integration"],
+    "tags": ["verb", "noun"],
+    "frequencyRank": 2529
+  },
+  {
+    "simplified": "自主",
+    "traditional": "自主",
+    "pinyin": "zìzhǔ",
+    "pinyinTones": "zì zhǔ",
+    "definitions": ["autonomous", "independent", "to act on one's own"],
+    "tags": ["adjective", "verb"],
+    "frequencyRank": 2530
+  }
+]
