@@ -11,26 +11,20 @@ interface StreakCounterProps {
 export default function StreakCounter({ streakDays, compact = false }: StreakCounterProps) {
   const isHot = streakDays >= 7
 
-  const fireVariants = {
-    idle: { scale: 1, rotate: 0 },
-    pulse: {
-      scale: [1, 1.15, 1, 1.1, 1],
-      rotate: [-3, 3, -3, 3, 0],
-      transition: {
-        duration: 1.2,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
-    },
-  }
+  const pulseAnimation = isHot
+    ? { scale: [1, 1.15, 1, 1.1, 1], rotate: [-3, 3, -3, 3, 0] }
+    : {}
+  const pulseTransition = isHot
+    ? { duration: 1.2, repeat: Infinity }
+    : {}
 
   if (compact) {
     return (
       <div className="flex items-center gap-1.5">
         <motion.span
           className="text-xl leading-none"
-          variants={fireVariants}
-          animate={isHot ? 'pulse' : 'idle'}
+          animate={pulseAnimation}
+          transition={pulseTransition}
         >
           🔥
         </motion.span>
@@ -50,8 +44,8 @@ export default function StreakCounter({ streakDays, compact = false }: StreakCou
     >
       <motion.span
         className="text-3xl leading-none"
-        variants={fireVariants}
-        animate={isHot ? 'pulse' : 'idle'}
+        animate={pulseAnimation}
+        transition={pulseTransition}
       >
         🔥
       </motion.span>

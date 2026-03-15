@@ -2,7 +2,7 @@ import Stripe from 'stripe'
 import { FLAGS } from '@/lib/flags'
 
 export const stripe = FLAGS.STRIPE_ENABLED
-  ? new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2025-01-27.acacia' })
+  ? new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-02-25.clover' })
   : null
 
 export const PLANS = {
