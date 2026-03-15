@@ -1,9 +1,15 @@
 import { PrismaClient } from '@prisma/client'
+import { PrismaPg } from '@prisma/adapter-pg'
+import * as dotenv from 'dotenv'
 import hsk1 from './data/hsk1.json'
 import hsk2 from './data/hsk2.json'
 import achievementsData from './data/achievements.json'
 
-const prisma = new PrismaClient()
+dotenv.config({ path: '.env.local' })
+dotenv.config({ path: '.env' })
+
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! })
+const prisma = new PrismaClient({ adapter })
 
 async function main() {
   console.log('Seeding HSK words...')
