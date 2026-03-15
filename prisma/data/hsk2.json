@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "学习",
+    "traditional": "學習",
+    "pinyin": "xué xí",
+    "pinyinTones": "xue2 xi2",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to study; to learn", "example_zh": "我每天学习中文。", "example_pinyin": "Wǒ měitiān xuéxí Zhōngwén.", "example_en": "I study Chinese every day."}],
+    "tags": ["verb", "education"],
+    "frequencyRank": 31
+  },
+  {
+    "simplified": "工作",
+    "traditional": "工作",
+    "pinyin": "gōng zuò",
+    "pinyinTones": "gong1 zuo4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to work; work; job", "example_zh": "他在一家公司工作。", "example_pinyin": "Tā zài yī jiā gōngsī gōngzuò.", "example_en": "He works at a company."}],
+    "tags": ["verb", "noun", "work"],
+    "frequencyRank": 32
+  },
+  {
+    "simplified": "时间",
+    "traditional": "時間",
+    "pinyin": "shí jiān",
+    "pinyinTones": "shi2 jian1",
+    "definitions": [{"part_of_speech": "noun", "meaning": "time; period of time", "example_zh": "我没有时间。", "example_pinyin": "Wǒ méiyǒu shíjiān.", "example_en": "I don't have time."}],
+    "tags": ["noun", "time"],
+    "frequencyRank": 33
+  },
+  {
+    "simplified": "地方",
+    "traditional": "地方",
+    "pinyin": "dì fāng",
+    "pinyinTones": "di4 fang1",
+    "definitions": [{"part_of_speech": "noun", "meaning": "place; location; area", "example_zh": "这是一个好地方。", "example_pinyin": "Zhè shì yī gè hǎo dìfāng.", "example_en": "This is a good place."}],
+    "tags": ["noun", "location"],
+    "frequencyRank": 34
+  },
+  {
+    "simplified": "觉得",
+    "traditional": "覺得",
+    "pinyin": "jué de",
+    "pinyinTones": "jue2 de5",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to feel; to think; to consider", "example_zh": "我觉得这很有趣。", "example_pinyin": "Wǒ juéde zhè hěn yǒuqù.", "example_en": "I feel this is very interesting."}],
+    "tags": ["verb", "feelings"],
+    "frequencyRank": 35
+  },
+  {
+    "simplified": "知道",
+    "traditional": "知道",
+    "pinyin": "zhī dào",
+    "pinyinTones": "zhi1 dao4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to know; to be aware of", "example_zh": "你知道吗？", "example_pinyin": "Nǐ zhīdào ma?", "example_en": "Do you know?"}],
+    "tags": ["verb", "cognition"],
+    "frequencyRank": 36
+  },
+  {
+    "simplified": "告诉",
+    "traditional": "告訴",
+    "pinyin": "gào su",
+    "pinyinTones": "gao4 su5",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to tell; to inform", "example_zh": "请告诉我你的名字。", "example_pinyin": "Qǐng gàosù wǒ nǐ de míngzi.", "example_en": "Please tell me your name."}],
+    "tags": ["verb", "communication"],
+    "frequencyRank": 37
+  },
+  {
+    "simplified": "喜欢",
+    "traditional": "喜歡",
+    "pinyin": "xǐ huān",
+    "pinyinTones": "xi3 huan1",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to like; to be fond of; to enjoy", "example_zh": "我喜欢音乐。", "example_pinyin": "Wǒ xǐhuān yīnyuè.", "example_en": "I like music."}],
+    "tags": ["verb", "feelings"],
+    "frequencyRank": 38
+  },
+  {
+    "simplified": "想",
+    "traditional": "想",
+    "pinyin": "xiǎng",
+    "pinyinTones": "xiang3",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to think; to want; to miss", "example_zh": "我想去中国。", "example_pinyin": "Wǒ xiǎng qù Zhōngguó.", "example_en": "I want to go to China."}],
+    "tags": ["verb", "cognition"],
+    "frequencyRank": 39
+  },
+  {
+    "simplified": "可以",
+    "traditional": "可以",
+    "pinyin": "kě yǐ",
+    "pinyinTones": "ke3 yi3",
+    "definitions": [{"part_of_speech": "auxiliary verb", "meaning": "can; may; to be able to; to be allowed to", "example_zh": "我可以进来吗？", "example_pinyin": "Wǒ kěyǐ jìnlái ma?", "example_en": "May I come in?"}],
+    "tags": ["auxiliary verb", "permission"],
+    "frequencyRank": 40
+  },
+  {
+    "simplified": "应该",
+    "traditional": "應該",
+    "pinyin": "yīng gāi",
+    "pinyinTones": "ying1 gai1",
+    "definitions": [{"part_of_speech": "auxiliary verb", "meaning": "should; ought to; must", "example_zh": "你应该多睡觉。", "example_pinyin": "Nǐ yīnggāi duō shuìjiào.", "example_en": "You should sleep more."}],
+    "tags": ["auxiliary verb", "obligation"],
+    "frequencyRank": 41
+  },
+  {
+    "simplified": "需要",
+    "traditional": "需要",
+    "pinyin": "xū yào",
+    "pinyinTones": "xu1 yao4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to need; to require; need", "example_zh": "我需要帮助。", "example_pinyin": "Wǒ xūyào bāngzhù.", "example_en": "I need help."}],
+    "tags": ["verb", "necessity"],
+    "frequencyRank": 42
+  },
+  {
+    "simplified": "因为",
+    "traditional": "因為",
+    "pinyin": "yīn wèi",
+    "pinyinTones": "yin1 wei4",
+    "definitions": [{"part_of_speech": "conjunction", "meaning": "because; since", "example_zh": "因为下雨，我没有出去。", "example_pinyin": "Yīnwèi xià yǔ, wǒ méiyǒu chūqù.", "example_en": "Because it was raining, I didn't go out."}],
+    "tags": ["conjunction"],
+    "frequencyRank": 43
+  },
+  {
+    "simplified": "所以",
+    "traditional": "所以",
+    "pinyin": "suǒ yǐ",
+    "pinyinTones": "suo3 yi3",
+    "definitions": [{"part_of_speech": "conjunction", "meaning": "so; therefore; as a result", "example_zh": "我很累，所以想休息。", "example_pinyin": "Wǒ hěn lèi, suǒyǐ xiǎng xiūxi.", "example_en": "I'm very tired, so I want to rest."}],
+    "tags": ["conjunction"],
+    "frequencyRank": 44
+  },
+  {
+    "simplified": "但是",
+    "traditional": "但是",
+    "pinyin": "dàn shì",
+    "pinyinTones": "dan4 shi4",
+    "definitions": [{"part_of_speech": "conjunction", "meaning": "but; however; yet", "example_zh": "我想去，但是没有时间。", "example_pinyin": "Wǒ xiǎng qù, dànshì méiyǒu shíjiān.", "example_en": "I want to go, but I don't have time."}],
+    "tags": ["conjunction"],
+    "frequencyRank": 45
+  },
+  {
+    "simplified": "然后",
+    "traditional": "然後",
+    "pinyin": "rán hòu",
+    "pinyinTones": "ran2 hou4",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "then; after that; afterwards", "example_zh": "先吃饭，然后去散步。", "example_pinyin": "Xiān chīfàn, ránhòu qù sànbù.", "example_en": "First eat, then go for a walk."}],
+    "tags": ["adverb", "sequence"],
+    "frequencyRank": 46
+  },
+  {
+    "simplified": "已经",
+    "traditional": "已經",
+    "pinyin": "yǐ jīng",
+    "pinyinTones": "yi3 jing1",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "already", "example_zh": "我已经吃了。", "example_pinyin": "Wǒ yǐjīng chī le.", "example_en": "I have already eaten."}],
+    "tags": ["adverb", "time"],
+    "frequencyRank": 47
+  },
+  {
+    "simplified": "还",
+    "traditional": "還",
+    "pinyin": "hái",
+    "pinyinTones": "hai2",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "still; yet; also; in addition", "example_zh": "你还有问题吗？", "example_pinyin": "Nǐ hái yǒu wèntí ma?", "example_en": "Do you still have questions?"}],
+    "tags": ["adverb"],
+    "frequencyRank": 48
+  },
+  {
+    "simplified": "就",
+    "traditional": "就",
+    "pinyin": "jiù",
+    "pinyinTones": "jiu4",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "just; right away; then; exactly", "example_zh": "我就在这里。", "example_pinyin": "Wǒ jiù zài zhèlǐ.", "example_en": "I'm right here."}],
+    "tags": ["adverb"],
+    "frequencyRank": 49
+  },
+  {
+    "simplified": "都",
+    "traditional": "都",
+    "pinyin": "dōu",
+    "pinyinTones": "dou1",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "all; both; even; already", "example_zh": "我们都是学生。", "example_pinyin": "Wǒmen dōu shì xuéshēng.", "example_en": "We are all students."}],
+    "tags": ["adverb"],
+    "frequencyRank": 50
+  },
+  {
+    "simplified": "也",
+    "traditional": "也",
+    "pinyin": "yě",
+    "pinyinTones": "ye3",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "also; too; as well", "example_zh": "我也喜欢。", "example_pinyin": "Wǒ yě xǐhuān.", "example_en": "I also like it."}],
+    "tags": ["adverb"],
+    "frequencyRank": 51
+  },
+  {
+    "simplified": "从",
+    "traditional": "從",
+    "pinyin": "cóng",
+    "pinyinTones": "cong2",
+    "definitions": [{"part_of_speech": "preposition", "meaning": "from; since; through", "example_zh": "我从北京来。", "example_pinyin": "Wǒ cóng Běijīng lái.", "example_en": "I come from Beijing."}],
+    "tags": ["preposition"],
+    "frequencyRank": 52
+  },
+  {
+    "simplified": "到",
+    "traditional": "到",
+    "pinyin": "dào",
+    "pinyinTones": "dao4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to arrive; to reach; until; to", "example_zh": "我们到了。", "example_pinyin": "Wǒmen dào le.", "example_en": "We have arrived."}],
+    "tags": ["verb", "preposition"],
+    "frequencyRank": 53
+  },
+  {
+    "simplified": "比",
+    "traditional": "比",
+    "pinyin": "bǐ",
+    "pinyinTones": "bi3",
+    "definitions": [{"part_of_speech": "preposition", "meaning": "compared to; than; to compare", "example_zh": "他比我高。", "example_pinyin": "Tā bǐ wǒ gāo.", "example_en": "He is taller than me."}],
+    "tags": ["preposition", "comparison"],
+    "frequencyRank": 54
+  },
+  {
+    "simplified": "很",
+    "traditional": "很",
+    "pinyin": "hěn",
+    "pinyinTones": "hen3",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "very; quite; rather", "example_zh": "这本书很好看。", "example_pinyin": "Zhè běn shū hěn hǎokàn.", "example_en": "This book is very interesting."}],
+    "tags": ["adverb", "degree"],
+    "frequencyRank": 55
+  },
+  {
+    "simplified": "非常",
+    "traditional": "非常",
+    "pinyin": "fēi cháng",
+    "pinyinTones": "fei1 chang2",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "very; extremely; extraordinarily", "example_zh": "今天非常热。", "example_pinyin": "Jīntiān fēicháng rè.", "example_en": "It is extremely hot today."}],
+    "tags": ["adverb", "degree"],
+    "frequencyRank": 56
+  },
+  {
+    "simplified": "真",
+    "traditional": "真",
+    "pinyin": "zhēn",
+    "pinyinTones": "zhen1",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "really; truly; indeed; genuine", "example_zh": "你真好！", "example_pinyin": "Nǐ zhēn hǎo!", "example_en": "You are really kind!"}],
+    "tags": ["adverb", "degree"],
+    "frequencyRank": 57
+  },
+  {
+    "simplified": "以前",
+    "traditional": "以前",
+    "pinyin": "yǐ qián",
+    "pinyinTones": "yi3 qian2",
+    "definitions": [{"part_of_speech": "noun", "meaning": "before; previously; formerly; in the past", "example_zh": "以前我不会说中文。", "example_pinyin": "Yǐqián wǒ bù huì shuō Zhōngwén.", "example_en": "Before, I couldn't speak Chinese."}],
+    "tags": ["noun", "time"],
+    "frequencyRank": 58
+  },
+  {
+    "simplified": "以后",
+    "traditional": "以後",
+    "pinyin": "yǐ hòu",
+    "pinyinTones": "yi3 hou4",
+    "definitions": [{"part_of_speech": "noun", "meaning": "after; later; afterwards; in the future", "example_zh": "以后我要去中国。", "example_pinyin": "Yǐhòu wǒ yào qù Zhōngguó.", "example_en": "In the future I want to go to China."}],
+    "tags": ["noun", "time"],
+    "frequencyRank": 59
+  },
+  {
+    "simplified": "现在",
+    "traditional": "現在",
+    "pinyin": "xiàn zài",
+    "pinyinTones": "xian4 zai4",
+    "definitions": [{"part_of_speech": "noun", "meaning": "now; at present; currently", "example_zh": "现在几点了？", "example_pinyin": "Xiànzài jǐ diǎn le?", "example_en": "What time is it now?"}],
+    "tags": ["noun", "time"],
+    "frequencyRank": 60
+  }
+]

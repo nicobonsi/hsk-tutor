@@ -1,0 +1,212 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id                 String    @id @default(uuid())
+  email              String    @unique
+  username           String    @unique
+  avatarUrl          String?
+  hskLevel           Int       @default(1)
+  xp                 Int       @default(0)
+  streakDays         Int       @default(0)
+  lastActiveAt       DateTime?
+  isAlpha            Boolean   @default(true)
+  stripeCustomerId   String?
+  subscriptionStatus String    @default("free")
+  createdAt          DateTime  @default(now())
+
+  wordProgress     UserWordProgress[]
+  exerciseLogs     UserExerciseLog[]
+  studySessions    StudySession[]
+  achievements     UserAchievement[]
+  dailyChallenges  UserDailyChallenge[]
+  leaderboardSnaps LeaderboardSnapshot[]
+
+  @@map("users")
+}
+
+model HskWord {
+  id            String   @id @default(uuid())
+  level         Int
+  simplified    String
+  traditional   String?
+  pinyin        String
+  pinyinTones   String
+  definitions   Json
+  audioUrl      String?
+  hsk2012       Boolean  @default(true)
+  hsk30         Boolean  @default(false)
+  frequencyRank Int?
+  tags          String[]
+  createdAt     DateTime @default(now())
+
+  wordProgress UserWordProgress[]
+  exercises    Exercise[]
+
+  @@map("hsk_words")
+}
+
+model GrammarPoint {
+  id           String   @id @default(uuid())
+  level        Int
+  title        String
+  slug         String   @unique
+  explanation  String
+  examples     Json
+  pattern      String?
+  relatedWords String[]
+  orderInLevel Int
+
+  exercises Exercise[]
+
+  @@map("grammar_points")
+}
+
+model Exercise {
+  id            String   @id @default(uuid())
+  type          String
+  level         Int
+  wordId        String?
+  grammarId     String?
+  prompt        Json
+  correctAnswer String
+  distractors   String[]
+  audioUrl      String?
+  imageUrl      String?
+  difficulty    Int      @default(1)
+  tags          String[]
+
+  word       HskWord?      @relation(fields: [wordId], references: [id])
+  grammar    GrammarPoint? @relation(fields: [grammarId], references: [id])
+  logs       UserExerciseLog[]
+  challenges DailyChallenge[] @relation("ChallengeExercises")
+
+  @@map("exercises")
+}
+
+model UserWordProgress {
+  id             String    @id @default(uuid())
+  userId         String
+  wordId         String
+  status         String    @default("new")
+  easeFactor     Float     @default(2.5)
+  intervalDays   Int       @default(1)
+  nextReviewAt   DateTime?
+  correctCount   Int       @default(0)
+  incorrectCount Int       @default(0)
+  lastSeenAt     DateTime?
+
+  user User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word HskWord @relation(fields: [wordId], references: [id])
+
+  @@unique([userId, wordId])
+  @@map("user_word_progress")
+}
+
+model UserExerciseLog {
+  id          String   @id @default(uuid())
+  userId      String
+  exerciseId  String
+  sessionId   String?
+  isCorrect   Boolean
+  timeTakenMs Int?
+  userAnswer  String?
+  answeredAt  DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercise Exercise @relation(fields: [exerciseId], references: [id])
+
+  @@map("user_exercise_logs")
+}
+
+model StudySession {
+  id           String   @id @default(uuid())
+  userId       String
+  level        Int
+  mode         String
+  xpEarned     Int      @default(0)
+  wordsStudied Int      @default(0)
+  accuracy     Float?
+  durationMs   Int?
+  completedAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("study_sessions")
+}
+
+model Achievement {
+  id             String @id @default(uuid())
+  key            String @unique
+  title          String
+  description    String
+  icon           String
+  xpReward       Int    @default(0)
+  conditionType  String
+  conditionValue Int
+
+  userAchievements UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  id            String   @id @default(uuid())
+  userId        String
+  achievementId String
+  earnedAt      DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id])
+
+  @@unique([userId, achievementId])
+  @@map("user_achievements")
+}
+
+model DailyChallenge {
+  id         String   @id @default(uuid())
+  date       DateTime @unique
+  levelRange Int[]
+  xpBonus    Int      @default(50)
+
+  exercises      Exercise[]           @relation("ChallengeExercises")
+  userChallenges UserDailyChallenge[]
+
+  @@map("daily_challenges")
+}
+
+model UserDailyChallenge {
+  id          String    @id @default(uuid())
+  userId      String
+  challengeId String
+  completedAt DateTime?
+  score       Int?
+
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  challenge DailyChallenge @relation(fields: [challengeId], references: [id])
+
+  @@unique([userId, challengeId])
+  @@map("user_daily_challenges")
+}
+
+model LeaderboardSnapshot {
+  id        String   @id @default(uuid())
+  userId    String
+  period    String
+  periodKey String
+  xp        Int
+  rank      Int
+  updatedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, period, periodKey])
+  @@map("leaderboard_snapshots")
+}

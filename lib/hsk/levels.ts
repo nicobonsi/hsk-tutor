@@ -1,0 +1,66 @@
+export const HSK_LEVELS = [
+  {
+    level: 1,
+    name: 'HSK 1',
+    description: 'Beginner — ~150 words, everyday greetings and basic phrases',
+    wordCount: 150,
+    color: 'bg-green-500',
+    textColor: 'text-green-700',
+    bgLight: 'bg-green-50',
+    borderColor: 'border-green-300',
+  },
+  {
+    level: 2,
+    name: 'HSK 2',
+    description: 'Elementary — ~300 words, simple conversations on familiar topics',
+    wordCount: 300,
+    color: 'bg-blue-500',
+    textColor: 'text-blue-700',
+    bgLight: 'bg-blue-50',
+    borderColor: 'border-blue-300',
+  },
+  {
+    level: 3,
+    name: 'HSK 3',
+    description: 'Pre-intermediate — ~600 words, communication in most daily situations',
+    wordCount: 600,
+    color: 'bg-yellow-500',
+    textColor: 'text-yellow-700',
+    bgLight: 'bg-yellow-50',
+    borderColor: 'border-yellow-300',
+  },
+  {
+    level: 4,
+    name: 'HSK 4',
+    description: 'Intermediate — ~1200 words, fluent discussions on a wide range of topics',
+    wordCount: 1200,
+    color: 'bg-orange-500',
+    textColor: 'text-orange-700',
+    bgLight: 'bg-orange-50',
+    borderColor: 'border-orange-300',
+  },
+  {
+    level: 5,
+    name: 'HSK 5',
+    description: 'Upper-intermediate — ~2500 words, read newspapers, watch Chinese films',
+    wordCount: 2500,
+    color: 'bg-red-500',
+    textColor: 'text-red-700',
+    bgLight: 'bg-red-50',
+    borderColor: 'border-red-300',
+  },
+  {
+    level: 6,
+    name: 'HSK 6',
+    description: 'Advanced — ~5000 words, near-native proficiency',
+    wordCount: 5000,
+    color: 'bg-purple-500',
+    textColor: 'text-purple-700',
+    bgLight: 'bg-purple-50',
+    borderColor: 'border-purple-300',
+  },
+]
+
+export function getHskLevel(level: number) {
+  return HSK_LEVELS.find((l) => l.level === level) ?? HSK_LEVELS[0]
+}

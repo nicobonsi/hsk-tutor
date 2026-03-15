@@ -1,0 +1,272 @@
+[
+  {
+    "simplified": "你好",
+    "traditional": "你好",
+    "pinyin": "nǐ hǎo",
+    "pinyinTones": "ni3 hao3",
+    "definitions": [{"part_of_speech": "phrase", "meaning": "hello; hi", "example_zh": "你好！", "example_pinyin": "Nǐ hǎo!", "example_en": "Hello!"}],
+    "tags": ["greeting"],
+    "frequencyRank": 1
+  },
+  {
+    "simplified": "谢谢",
+    "traditional": "謝謝",
+    "pinyin": "xiè xiè",
+    "pinyinTones": "xie4 xie4",
+    "definitions": [{"part_of_speech": "phrase", "meaning": "thank you; thanks", "example_zh": "谢谢你的帮助。", "example_pinyin": "Xiè xiè nǐ de bāngzhù.", "example_en": "Thank you for your help."}],
+    "tags": ["greeting", "politeness"],
+    "frequencyRank": 2
+  },
+  {
+    "simplified": "对不起",
+    "traditional": "對不起",
+    "pinyin": "duì bu qǐ",
+    "pinyinTones": "dui4 bu5 qi3",
+    "definitions": [{"part_of_speech": "phrase", "meaning": "sorry; excuse me; I'm sorry", "example_zh": "对不起，我来晚了。", "example_pinyin": "Duì bu qǐ, wǒ lái wǎn le.", "example_en": "Sorry, I'm late."}],
+    "tags": ["greeting", "politeness"],
+    "frequencyRank": 3
+  },
+  {
+    "simplified": "再见",
+    "traditional": "再見",
+    "pinyin": "zài jiàn",
+    "pinyinTones": "zai4 jian4",
+    "definitions": [{"part_of_speech": "phrase", "meaning": "goodbye; see you again", "example_zh": "再见！明天见。", "example_pinyin": "Zài jiàn! Míngtiān jiàn.", "example_en": "Goodbye! See you tomorrow."}],
+    "tags": ["greeting"],
+    "frequencyRank": 4
+  },
+  {
+    "simplified": "我",
+    "traditional": "我",
+    "pinyin": "wǒ",
+    "pinyinTones": "wo3",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "I; me; my", "example_zh": "我是学生。", "example_pinyin": "Wǒ shì xuéshēng.", "example_en": "I am a student."}],
+    "tags": ["pronoun"],
+    "frequencyRank": 5
+  },
+  {
+    "simplified": "你",
+    "traditional": "你",
+    "pinyin": "nǐ",
+    "pinyinTones": "ni3",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "you (singular)", "example_zh": "你叫什么名字？", "example_pinyin": "Nǐ jiào shénme míngzi?", "example_en": "What is your name?"}],
+    "tags": ["pronoun"],
+    "frequencyRank": 6
+  },
+  {
+    "simplified": "他",
+    "traditional": "他",
+    "pinyin": "tā",
+    "pinyinTones": "ta1",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "he; him; his", "example_zh": "他是我的朋友。", "example_pinyin": "Tā shì wǒ de péngyǒu.", "example_en": "He is my friend."}],
+    "tags": ["pronoun"],
+    "frequencyRank": 7
+  },
+  {
+    "simplified": "她",
+    "traditional": "她",
+    "pinyin": "tā",
+    "pinyinTones": "ta1",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "she; her", "example_zh": "她很漂亮。", "example_pinyin": "Tā hěn piàoliang.", "example_en": "She is very beautiful."}],
+    "tags": ["pronoun"],
+    "frequencyRank": 8
+  },
+  {
+    "simplified": "们",
+    "traditional": "們",
+    "pinyin": "men",
+    "pinyinTones": "men5",
+    "definitions": [{"part_of_speech": "suffix", "meaning": "plural marker for pronouns and people", "example_zh": "我们是朋友。", "example_pinyin": "Wǒmen shì péngyǒu.", "example_en": "We are friends."}],
+    "tags": ["grammar", "suffix"],
+    "frequencyRank": 9
+  },
+  {
+    "simplified": "是",
+    "traditional": "是",
+    "pinyin": "shì",
+    "pinyinTones": "shi4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to be; is; am; are", "example_zh": "这是我的书。", "example_pinyin": "Zhè shì wǒ de shū.", "example_en": "This is my book."}],
+    "tags": ["verb", "grammar"],
+    "frequencyRank": 10
+  },
+  {
+    "simplified": "不",
+    "traditional": "不",
+    "pinyin": "bù",
+    "pinyinTones": "bu4",
+    "definitions": [{"part_of_speech": "adverb", "meaning": "no; not", "example_zh": "我不知道。", "example_pinyin": "Wǒ bù zhīdào.", "example_en": "I don't know."}],
+    "tags": ["adverb", "negation"],
+    "frequencyRank": 11
+  },
+  {
+    "simplified": "有",
+    "traditional": "有",
+    "pinyin": "yǒu",
+    "pinyinTones": "you3",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to have; there is; there are", "example_zh": "我有一个哥哥。", "example_pinyin": "Wǒ yǒu yī gè gēgē.", "example_en": "I have an older brother."}],
+    "tags": ["verb"],
+    "frequencyRank": 12
+  },
+  {
+    "simplified": "在",
+    "traditional": "在",
+    "pinyin": "zài",
+    "pinyinTones": "zai4",
+    "definitions": [{"part_of_speech": "verb", "meaning": "to be at; to be in; to exist", "example_zh": "他在家。", "example_pinyin": "Tā zài jiā.", "example_en": "He is at home."}],
+    "tags": ["verb", "location"],
+    "frequencyRank": 13
+  },
+  {
+    "simplified": "好",
+    "traditional": "好",
+    "pinyin": "hǎo",
+    "pinyinTones": "hao3",
+    "definitions": [{"part_of_speech": "adjective", "meaning": "good; well; fine", "example_zh": "这个很好。", "example_pinyin": "Zhège hěn hǎo.", "example_en": "This is very good."}],
+    "tags": ["adjective"],
+    "frequencyRank": 14
+  },
+  {
+    "simplified": "大",
+    "traditional": "大",
+    "pinyin": "dà",
+    "pinyinTones": "da4",
+    "definitions": [{"part_of_speech": "adjective", "meaning": "big; large; great", "example_zh": "这个房间很大。", "example_pinyin": "Zhège fángjiān hěn dà.", "example_en": "This room is very big."}],
+    "tags": ["adjective", "size"],
+    "frequencyRank": 15
+  },
+  {
+    "simplified": "小",
+    "traditional": "小",
+    "pinyin": "xiǎo",
+    "pinyinTones": "xiao3",
+    "definitions": [{"part_of_speech": "adjective", "meaning": "small; little; tiny", "example_zh": "这只猫很小。", "example_pinyin": "Zhè zhī māo hěn xiǎo.", "example_en": "This cat is very small."}],
+    "tags": ["adjective", "size"],
+    "frequencyRank": 16
+  },
+  {
+    "simplified": "多",
+    "traditional": "多",
+    "pinyin": "duō",
+    "pinyinTones": "duo1",
+    "definitions": [{"part_of_speech": "adjective", "meaning": "many; much; a lot of", "example_zh": "这里有很多人。", "example_pinyin": "Zhèlǐ yǒu hěn duō rén.", "example_en": "There are many people here."}],
+    "tags": ["adjective", "quantity"],
+    "frequencyRank": 17
+  },
+  {
+    "simplified": "少",
+    "traditional": "少",
+    "pinyin": "shǎo",
+    "pinyinTones": "shao3",
+    "definitions": [{"part_of_speech": "adjective", "meaning": "few; little; less", "example_zh": "今天人很少。", "example_pinyin": "Jīntiān rén hěn shǎo.", "example_en": "There are few people today."}],
+    "tags": ["adjective", "quantity"],
+    "frequencyRank": 18
+  },
+  {
+    "simplified": "几",
+    "traditional": "幾",
+    "pinyin": "jǐ",
+    "pinyinTones": "ji3",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "how many; several; a few", "example_zh": "你有几本书？", "example_pinyin": "Nǐ yǒu jǐ běn shū?", "example_en": "How many books do you have?"}],
+    "tags": ["question", "quantity"],
+    "frequencyRank": 19
+  },
+  {
+    "simplified": "什么",
+    "traditional": "什麼",
+    "pinyin": "shén me",
+    "pinyinTones": "shen2 me5",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "what; whatever; anything", "example_zh": "你想吃什么？", "example_pinyin": "Nǐ xiǎng chī shénme?", "example_en": "What do you want to eat?"}],
+    "tags": ["question"],
+    "frequencyRank": 20
+  },
+  {
+    "simplified": "怎么",
+    "traditional": "怎麼",
+    "pinyin": "zěn me",
+    "pinyinTones": "zen3 me5",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "how; why; what", "example_zh": "这个怎么说？", "example_pinyin": "Zhège zěnme shuō?", "example_en": "How do you say this?"}],
+    "tags": ["question"],
+    "frequencyRank": 21
+  },
+  {
+    "simplified": "哪",
+    "traditional": "哪",
+    "pinyin": "nǎ",
+    "pinyinTones": "na3",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "which; where", "example_zh": "你从哪里来？", "example_pinyin": "Nǐ cóng nǎlǐ lái?", "example_en": "Where are you from?"}],
+    "tags": ["question"],
+    "frequencyRank": 22
+  },
+  {
+    "simplified": "这",
+    "traditional": "這",
+    "pinyin": "zhè",
+    "pinyinTones": "zhe4",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "this; these", "example_zh": "这是什么？", "example_pinyin": "Zhè shì shénme?", "example_en": "What is this?"}],
+    "tags": ["pronoun", "demonstrative"],
+    "frequencyRank": 23
+  },
+  {
+    "simplified": "那",
+    "traditional": "那",
+    "pinyin": "nà",
+    "pinyinTones": "na4",
+    "definitions": [{"part_of_speech": "pronoun", "meaning": "that; those", "example_zh": "那是谁？", "example_pinyin": "Nà shì shéi?", "example_en": "Who is that?"}],
+    "tags": ["pronoun", "demonstrative"],
+    "frequencyRank": 24
+  },
+  {
+    "simplified": "的",
+    "traditional": "的",
+    "pinyin": "de",
+    "pinyinTones": "de5",
+    "definitions": [{"part_of_speech": "particle", "meaning": "structural particle; possessive marker", "example_zh": "这是我的书。", "example_pinyin": "Zhè shì wǒ de shū.", "example_en": "This is my book."}],
+    "tags": ["particle", "grammar"],
+    "frequencyRank": 25
+  },
+  {
+    "simplified": "了",
+    "traditional": "了",
+    "pinyin": "le",
+    "pinyinTones": "le5",
+    "definitions": [{"part_of_speech": "particle", "meaning": "completed action particle; change of state", "example_zh": "我吃了。", "example_pinyin": "Wǒ chī le.", "example_en": "I ate (already)."}],
+    "tags": ["particle", "grammar"],
+    "frequencyRank": 26
+  },
+  {
+    "simplified": "吗",
+    "traditional": "嗎",
+    "pinyin": "ma",
+    "pinyinTones": "ma5",
+    "definitions": [{"part_of_speech": "particle", "meaning": "question particle for yes/no questions", "example_zh": "你是中国人吗？", "example_pinyin": "Nǐ shì Zhōngguó rén ma?", "example_en": "Are you Chinese?"}],
+    "tags": ["particle", "question"],
+    "frequencyRank": 27
+  },
+  {
+    "simplified": "呢",
+    "traditional": "呢",
+    "pinyin": "ne",
+    "pinyinTones": "ne5",
+    "definitions": [{"part_of_speech": "particle", "meaning": "question particle; and what about...?", "example_zh": "你呢？", "example_pinyin": "Nǐ ne?", "example_en": "And you? / What about you?"}],
+    "tags": ["particle", "question"],
+    "frequencyRank": 28
+  },
+  {
+    "simplified": "一",
+    "traditional": "一",
+    "pinyin": "yī",
+    "pinyinTones": "yi1",
+    "definitions": [{"part_of_speech": "number", "meaning": "one; 1", "example_zh": "我有一个苹果。", "example_pinyin": "Wǒ yǒu yī gè píngguǒ.", "example_en": "I have one apple."}],
+    "tags": ["number"],
+    "frequencyRank": 29
+  },
+  {
+    "simplified": "二",
+    "traditional": "二",
+    "pinyin": "èr",
+    "pinyinTones": "er4",
+    "definitions": [{"part_of_speech": "number", "meaning": "two; 2", "example_zh": "我有两个哥哥。", "example_pinyin": "Wǒ yǒu liǎng gè gēgē.", "example_en": "I have two older brothers."}],
+    "tags": ["number"],
+    "frequencyRank": 30
+  }
+]
