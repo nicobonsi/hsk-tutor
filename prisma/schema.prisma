@@ -7,31 +7,30 @@ datasource db {
 }
 
 model User {
-  id                 String    @id @default(uuid())
-  email              String    @unique
-  username           String    @unique
+  id                 String                @id @default(uuid())
+  email              String                @unique
+  username           String                @unique
   avatarUrl          String?
-  hskLevel           Int       @default(1)
-  xp                 Int       @default(0)
-  streakDays         Int       @default(0)
+  hskLevel           Int                   @default(1)
+  xp                 Int                   @default(0)
+  streakDays         Int                   @default(0)
   lastActiveAt       DateTime?
-  isAlpha            Boolean   @default(true)
+  isAlpha            Boolean               @default(true)
   stripeCustomerId   String?
-  subscriptionStatus String    @default("free")
-  createdAt          DateTime  @default(now())
-
-  wordProgress     UserWordProgress[]
-  exerciseLogs     UserExerciseLog[]
-  studySessions    StudySession[]
-  achievements     UserAchievement[]
-  dailyChallenges  UserDailyChallenge[]
-  leaderboardSnaps LeaderboardSnapshot[]
+  subscriptionStatus String                @default("free")
+  createdAt          DateTime              @default(now())
+  leaderboardSnaps   LeaderboardSnapshot[]
+  studySessions      StudySession[]
+  achievements       UserAchievement[]
+  dailyChallenges    UserDailyChallenge[]
+  exerciseLogs       UserExerciseLog[]
+  wordProgress       UserWordProgress[]
 
   @@map("users")
 }
 
 model HskWord {
-  id            String   @id @default(uuid())
+  id            String             @id @default(uuid())
   level         Int
   simplified    String
   traditional   String?
@@ -39,36 +38,34 @@ model HskWord {
   pinyinTones   String
   definitions   Json
   audioUrl      String?
-  hsk2012       Boolean  @default(true)
-  hsk30         Boolean  @default(false)
+  hsk2012       Boolean            @default(true)
+  hsk30         Boolean            @default(false)
   frequencyRank Int?
   tags          String[]
-  createdAt     DateTime @default(now())
-
-  wordProgress UserWordProgress[]
-  exercises    Exercise[]
+  createdAt     DateTime           @default(now())
+  exercises     Exercise[]
+  wordProgress  UserWordProgress[]
 
   @@map("hsk_words")
 }
 
 model GrammarPoint {
-  id           String   @id @default(uuid())
+  id           String     @id @default(uuid())
   level        Int
   title        String
-  slug         String   @unique
+  slug         String     @unique
   explanation  String
   examples     Json
   pattern      String?
   relatedWords String[]
   orderInLevel Int
-
-  exercises Exercise[]
+  exercises    Exercise[]
 
   @@map("grammar_points")
 }
 
 model Exercise {
-  id            String   @id @default(uuid())
+  id            String            @id @default(uuid())
   type          String
   level         Int
   wordId        String?
@@ -78,13 +75,12 @@ model Exercise {
   distractors   String[]
   audioUrl      String?
   imageUrl      String?
-  difficulty    Int      @default(1)
+  difficulty    Int               @default(1)
   tags          String[]
-
-  word       HskWord?      @relation(fields: [wordId], references: [id])
-  grammar    GrammarPoint? @relation(fields: [grammarId], references: [id])
-  logs       UserExerciseLog[]
-  challenges DailyChallenge[] @relation("ChallengeExercises")
+  grammar       GrammarPoint?     @relation(fields: [grammarId], references: [id])
+  word          HskWord?          @relation(fields: [wordId], references: [id])
+  logs          UserExerciseLog[]
+  challenges    DailyChallenge[]  @relation("ChallengeExercises")
 
   @@map("exercises")
 }
@@ -100,9 +96,8 @@ model UserWordProgress {
   correctCount   Int       @default(0)
   incorrectCount Int       @default(0)
   lastSeenAt     DateTime?
-
-  user User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  word HskWord @relation(fields: [wordId], references: [id])
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word           HskWord   @relation(fields: [wordId], references: [id])
 
   @@unique([userId, wordId])
   @@map("user_word_progress")
@@ -117,9 +112,8 @@ model UserExerciseLog {
   timeTakenMs Int?
   userAnswer  String?
   answeredAt  DateTime @default(now())
-
-  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  exercise Exercise @relation(fields: [exerciseId], references: [id])
+  exercise    Exercise @relation(fields: [exerciseId], references: [id])
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("user_exercise_logs")
 }
@@ -134,61 +128,56 @@ model StudySession {
   accuracy     Float?
   durationMs   Int?
   completedAt  DateTime @default(now())
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("study_sessions")
 }
 
 model Achievement {
-  id             String @id @default(uuid())
-  key            String @unique
-  title          String
-  description    String
-  icon           String
-  xpReward       Int    @default(0)
-  conditionType  String
-  conditionValue Int
-
+  id               String            @id @default(uuid())
+  key              String            @unique
+  title            String
+  description      String
+  icon             String
+  xpReward         Int               @default(0)
+  conditionType    String
+  conditionValue   Int
   userAchievements UserAchievement[]
 
   @@map("achievements")
 }
 
 model UserAchievement {
-  id            String   @id @default(uuid())
+  id            String      @id @default(uuid())
   userId        String
   achievementId String
-  earnedAt      DateTime @default(now())
-
-  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  achievement Achievement @relation(fields: [achievementId], references: [id])
+  earnedAt      DateTime    @default(now())
+  achievement   Achievement @relation(fields: [achievementId], references: [id])
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, achievementId])
   @@map("user_achievements")
 }
 
 model DailyChallenge {
-  id         String   @id @default(uuid())
-  date       DateTime @unique
-  levelRange Int[]
-  xpBonus    Int      @default(50)
-
-  exercises      Exercise[]           @relation("ChallengeExercises")
+  id             String               @id @default(uuid())
+  date           DateTime             @unique
+  levelRange     Int[]
+  xpBonus        Int                  @default(50)
   userChallenges UserDailyChallenge[]
+  exercises      Exercise[]           @relation("ChallengeExercises")
 
   @@map("daily_challenges")
 }
 
 model UserDailyChallenge {
-  id          String    @id @default(uuid())
+  id          String         @id @default(uuid())
   userId      String
   challengeId String
   completedAt DateTime?
   score       Int?
-
-  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
-  challenge DailyChallenge @relation(fields: [challengeId], references: [id])
+  challenge   DailyChallenge @relation(fields: [challengeId], references: [id])
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, challengeId])
   @@map("user_daily_challenges")
@@ -202,8 +191,7 @@ model LeaderboardSnapshot {
   xp        Int
   rank      Int
   updatedAt DateTime @default(now())
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, period, periodKey])
   @@map("leaderboard_snapshots")

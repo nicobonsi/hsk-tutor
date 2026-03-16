@@ -18,6 +18,7 @@ interface ExerciseWithWord extends Exercise {
 interface ExerciseContainerProps {
   exercises: ExerciseWithWord[]
   onComplete: (results: { correct: number; total: number; xpEarned: number }) => void
+  showPinyin?: boolean
 }
 
 interface XpPopup {
@@ -25,7 +26,7 @@ interface XpPopup {
   amount: number
 }
 
-export default function ExerciseContainer({ exercises, onComplete }: ExerciseContainerProps) {
+export default function ExerciseContainer({ exercises, onComplete, showPinyin = true }: ExerciseContainerProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
   const [xpEarned, setXpEarned] = useState(0)
@@ -92,7 +93,7 @@ export default function ExerciseContainer({ exercises, onComplete }: ExerciseCon
         const prompt = current.prompt as VocabRecallPrompt
         if (!current.word) return null
         // Treat vocab_recall as a flashcard
-        return <FlashCard word={current.word} onAnswer={handleAnswer} />
+        return <FlashCard word={current.word} onAnswer={handleAnswer} showPinyin={showPinyin} />
       }
 
       case 'fill_blank': {

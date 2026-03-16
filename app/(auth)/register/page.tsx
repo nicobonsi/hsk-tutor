@@ -16,6 +16,7 @@ export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [emailSent, setEmailSent] = useState(false)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -28,6 +29,7 @@ export default function RegisterPage() {
       password,
       options: {
         data: { username },
+        emailRedirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/callback`,
       },
     })
 
@@ -43,29 +45,21 @@ export default function RegisterPage() {
       return
     }
 
-    // 2. Create user row in DB
-    try {
-      const res = await fetch('/api/user/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username }),
-      })
+    // Show "check your email" — DB user is created in /auth/callback after confirmation
+    setEmailSent(true)
+    setLoading(false)
+  }
 
-      if (!res.ok) {
-        const body = await res.json()
-        setError(body.error ?? 'Failed to create profile. Please try again.')
-        setLoading(false)
-        return
-      }
-    } catch {
-      setError('Network error. Please try again.')
-      setLoading(false)
-      return
-    }
-
-    // 3. Redirect to onboarding
-    router.push('/onboarding')
-    router.refresh()
+  if (emailSent) {
+    return (
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 text-center">
+        <div className="text-5xl mb-4">📬</div>
+        <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Check your email</h1>
+        <p className="text-sm text-gray-500">
+          We sent a confirmation link to <strong>{email}</strong>. Click it to activate your account and start learning.
+        </p>
+      </div>
+    )
   }
 
   return (

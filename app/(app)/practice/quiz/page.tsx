@@ -31,6 +31,7 @@ export default function QuizPage() {
   const [exercises, setExercises] = useState<Exercise[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [showPinyin, setShowPinyin] = useState(true)
   const [results, setResults] = useState<QuizResults | null>(null)
   const [sessionData, setSessionData] = useState<SessionResponse | null>(null)
   const [toastQueue, setToastQueue] = useState<Achievement[]>([])
@@ -158,11 +159,24 @@ export default function QuizPage() {
       {/* Quiz in progress */}
       {!loading && !error && !results && exercises.length > 0 && (
         <div className="w-full max-w-lg">
-          <div className="mb-6 text-center">
-            <h1 className="text-xl font-bold text-zinc-900">HSK {level} Quiz</h1>
-            <p className="text-sm text-zinc-500 mt-1">{count} questions</p>
+          <div className="mb-6 flex items-center justify-between">
+            <div>
+              <h1 className="text-xl font-bold text-zinc-900">HSK {level} Quiz</h1>
+              <p className="text-sm text-zinc-500 mt-0.5">{count} questions</p>
+            </div>
+            <button
+              onClick={() => setShowPinyin((v) => !v)}
+              className={cn(
+                'flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold border transition-colors',
+                showPinyin
+                  ? 'bg-indigo-50 border-indigo-200 text-indigo-700 hover:bg-indigo-100'
+                  : 'bg-zinc-100 border-zinc-200 text-zinc-500 hover:bg-zinc-200'
+              )}
+            >
+              {showPinyin ? 'Pinyin: ON' : 'Pinyin: OFF'}
+            </button>
           </div>
-          <ExerciseContainer exercises={exercises} onComplete={handleComplete} />
+          <ExerciseContainer exercises={exercises} onComplete={handleComplete} showPinyin={showPinyin} />
         </div>
       )}
 

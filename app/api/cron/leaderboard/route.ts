@@ -34,7 +34,34 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.json({ updated: topUsers.length })
+  // Create today's daily challenge if it doesn't exist yet
+  const todayStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()))
+  const existing = await prisma.dailyChallenge.findUnique({ where: { date: todayStart } })
+
+  let challengeCreated = false
+  if (!existing) {
+    // Pick 10 random exercises spread across all levels
+    const exercises = await prisma.exercise.findMany({
+      select: { id: true },
+      take: 50,
+    })
+    // Shuffle and pick 10
+    const shuffled = exercises.sort(() => Math.random() - 0.5).slice(0, 10)
+
+    if (shuffled.length > 0) {
+      await prisma.dailyChallenge.create({
+        data: {
+          date: todayStart,
+          levelRange: [1, 2, 3, 4, 5, 6],
+          xpBonus: 50,
+          exercises: { connect: shuffled.map((e) => ({ id: e.id })) },
+        },
+      })
+      challengeCreated = true
+    }
+  }
+
+  return NextResponse.json({ updated: topUsers.length, challengeCreated })
 }
 
 function getWeekNumber(date: Date): number {

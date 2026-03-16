@@ -89,7 +89,22 @@ export default async function DashboardPage() {
     }),
   ])
 
-  if (!dbUser) redirect('/login')
+  if (!dbUser) {
+    const username =
+      (authUser.user_metadata?.username as string | undefined) ??
+      authUser.email?.split('@')[0] ??
+      'user'
+    try {
+      await prisma.user.create({
+        data: { id: authUser.id, email: authUser.email!, username },
+      })
+    } catch {
+      // username conflict or other error — sign them out and back to register
+      await supabase.auth.signOut()
+      redirect('/register')
+    }
+    redirect('/dashboard')
+  }
 
   const levelColor = LEVEL_COLORS[dbUser.hskLevel] ?? 'bg-gray-500'
   const levelName = LEVEL_NAMES[dbUser.hskLevel] ?? 'Unknown'
@@ -163,7 +178,7 @@ export default async function DashboardPage() {
                 <p className="text-sm text-red-200 mt-1">
                   {todayChallenge
                     ? `Complete it to earn +${todayChallenge.xpBonus} bonus XP`
-                    : 'Check back soon for today\'s challenge'}
+                    : 'A new challenge drops every day at midnight UTC'}
                 </p>
               </div>
               {todayChallenge && (
@@ -213,7 +228,7 @@ export default async function DashboardPage() {
               </p>
             ) : (
               <div className="space-y-3">
-                {recentSessions.map((session) => (
+                {recentSessions.map((session: (typeof recentSessions)[number]) => (
                   <div
                     key={session.id}
                     className="flex items-center justify-between py-2.5 px-3 bg-gray-50 rounded-xl"
@@ -249,7 +264,7 @@ export default async function DashboardPage() {
             <h2 className="font-bold text-gray-900 mb-4">Quick Start</h2>
             <div className="space-y-3">
               <Link
-                href="/practice/flashcards"
+                href="/practice/quiz"
                 className="w-full flex items-center gap-3 bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium text-sm px-4 py-3 rounded-xl transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
@@ -263,7 +278,7 @@ export default async function DashboardPage() {
                 Quiz
               </Link>
               <Link
-                href="/practice/listening"
+                href="/practice/quiz"
                 className="w-full flex items-center gap-3 bg-green-50 hover:bg-green-100 text-green-700 font-medium text-sm px-4 py-3 rounded-xl transition-colors"
               >
                 <Headphones className="w-5 h-5" />

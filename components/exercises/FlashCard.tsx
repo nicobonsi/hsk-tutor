@@ -9,9 +9,10 @@ import type { HskWord } from '@/types'
 interface FlashCardProps {
   word: HskWord
   onAnswer: (isCorrect: boolean) => void
+  showPinyin?: boolean
 }
 
-export default function FlashCard({ word, onAnswer }: FlashCardProps) {
+export default function FlashCard({ word, onAnswer, showPinyin = true }: FlashCardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
   const [answered, setAnswered] = useState(false)
 
@@ -48,7 +49,9 @@ export default function FlashCard({ word, onAnswer }: FlashCardProps) {
             <p className="text-6xl font-bold text-zinc-900 tracking-wide select-none">
               {word.simplified}
             </p>
-            <p className="mt-3 text-xl text-zinc-500 select-none">{word.pinyin}</p>
+            {showPinyin && (
+              <p className="mt-3 text-xl text-zinc-500 select-none">{word.pinyin}</p>
+            )}
             <p className="mt-6 text-sm text-zinc-400 select-none">Tap to reveal</p>
           </div>
 

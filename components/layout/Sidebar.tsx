@@ -10,8 +10,11 @@ import {
   Users,
   User,
   Flame,
+  LogOut,
 } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
+import { createClient } from '@/lib/supabase/client'
+import { useRouter } from 'next/navigation'
 
 interface SidebarProps {
   user: {
@@ -26,7 +29,7 @@ interface SidebarProps {
 const NAV_LINKS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/learn', label: 'Learn', icon: BookOpen },
-  { href: '/practice', label: 'Practice', icon: Zap },
+  { href: '/practice/quiz', label: 'Practice', icon: Zap },
   { href: '/challenge', label: 'Daily Challenge', icon: Trophy },
   { href: '/leaderboard', label: 'Leaderboard', icon: Users },
   { href: '/profile', label: 'Profile', icon: User },
@@ -45,6 +48,14 @@ const XP_PER_LEVEL = 1000
 
 export default function Sidebar({ user }: SidebarProps) {
   const pathname = usePathname()
+  const router = useRouter()
+  const supabase = createClient()
+
+  async function handleLogout() {
+    await supabase.auth.signOut()
+    router.push('/login')
+    router.refresh()
+  }
 
   const xpInCurrentLevel = user.xp % XP_PER_LEVEL
   const xpProgress = Math.min((xpInCurrentLevel / XP_PER_LEVEL) * 100, 100)
@@ -113,7 +124,7 @@ export default function Sidebar({ user }: SidebarProps) {
         </div>
 
         {/* User pill */}
-        <div className="flex items-center gap-3 bg-gray-50 rounded-xl px-3 py-2.5">
+        <div className="flex items-center gap-3 bg-gray-50 rounded-xl px-3 py-2.5 group">
           <div className="relative flex-shrink-0">
             {user.avatarUrl ? (
               // eslint-disable-next-line @next/next-auth/no-html-link-for-pages
@@ -136,10 +147,17 @@ export default function Sidebar({ user }: SidebarProps) {
               {user.hskLevel}
             </span>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <p className="text-sm font-semibold text-gray-900 truncate">{user.username}</p>
             <p className="text-xs text-gray-400">{user.xp.toLocaleString()} XP total</p>
           </div>
+          <button
+            onClick={handleLogout}
+            title="Sign out"
+            className="flex-shrink-0 text-gray-400 hover:text-red-600 transition-colors"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </aside>
