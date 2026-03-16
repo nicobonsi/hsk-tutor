@@ -189,7 +189,7 @@ export default async function DashboardPage() {
             </div>
             {todayChallenge && (
               <Link
-                href="/challenge"
+                href="/practice/quiz"
                 className="inline-flex items-center gap-2 bg-white text-red-600 font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-red-50 transition-colors"
               >
                 Start Challenge <ArrowRight className="w-4 h-4" />

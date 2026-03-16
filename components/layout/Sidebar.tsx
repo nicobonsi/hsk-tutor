@@ -30,7 +30,7 @@ const NAV_LINKS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/learn', label: 'Learn', icon: BookOpen },
   { href: '/practice/quiz', label: 'Practice', icon: Zap },
-  { href: '/challenge', label: 'Daily Challenge', icon: Trophy },
+  { href: '/practice/quiz', label: 'Daily Challenge', icon: Trophy },
   { href: '/leaderboard', label: 'Leaderboard', icon: Users },
   { href: '/profile', label: 'Profile', icon: User },
 ]
