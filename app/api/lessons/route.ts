@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
     },
   })
 
-  let progressMap: Map<string, { startedAt: Date; completedAt: Date | null }> = new Map()
+  const progressMap: Map<string, { startedAt: Date; completedAt: Date | null }> = new Map()
 
   if (user) {
     const progress = await prisma.userLessonProgress.findMany({
