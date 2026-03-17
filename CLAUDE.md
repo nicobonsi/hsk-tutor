@@ -153,14 +153,12 @@ Read these docs before modifying the corresponding code:
 
 ## Current Build Context
 
-### Current: v0.2.0 (in progress)
-Active changes in working tree:
-- `app/(app)/practice/quiz/page.tsx`
-- `app/api/exercises/route.ts`
-- `app/api/sessions/route.ts`
-- `components/exercises/ExerciseContainer.tsx`
+### Current: v0.3.0 (not yet started)
+Nothing in progress. Next planned work: see `ROADMAP.md`.
 
-Design doc: Not yet created. Understand these changes before proceeding with any new work.
+Good starting points:
+- Wire full SM-2 algorithm (`lib/srs/sm2.ts`) into sessions API (currently uses simplified hardcoded intervals)
+- Populate or remove the unused `Exercise` table
 
-### Previous: v0.1.0
-Initial MVP — full app scaffold: auth, dashboard, learn mode, quiz, leaderboard, gamification, SRS. See commit `9ef5f50`.
+### Previous: v0.2.0
+SRS loop completion — exercise delivery ordered by SRS priority, per-word results tracked and persisted to `UserWordProgress` after each session, pre-quiz start screen. See `Docs/Design/V0.2.0_SRS_LOOP.md`. Commit `37b580f`.
