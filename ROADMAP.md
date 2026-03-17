@@ -10,7 +10,7 @@
 | Version | Goal | Status | Depends On |
 |---------|------|--------|------------|
 | v0.1.0 | Initial MVP | ✅ Complete | — |
-| v0.2.0 | Quiz & exercise improvements | 🔄 In Progress | v0.1.0 |
+| v0.2.0 | SRS loop completion | ✅ Complete | v0.1.0 |
 | v0.3.0 | TBD | Planned | v0.2.0 |
 
 ---
@@ -34,7 +34,7 @@
 
 ## v0.2.0 — SRS Loop Completion 🔄
 
-**Status:** Built, uncommitted — see [Docs/Design/V0.2.0_SRS_LOOP.md](Docs/Design/V0.2.0_SRS_LOOP.md)
+**Status:** ✅ Complete (`37b580f`) — see [Docs/Design/V0.2.0_SRS_LOOP.md](Docs/Design/V0.2.0_SRS_LOOP.md)
 
 - SRS-ordered exercise delivery (due → new → in-progress → mastered)
 - Per-word result tracking during quiz (`wordResults` in ExerciseContainer)
