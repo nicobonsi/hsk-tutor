@@ -9,10 +9,16 @@ import AchievementToast from '@/components/gamification/AchievementToast'
 import { cn } from '@/lib/utils/cn'
 import type { Exercise, Achievement } from '@/types'
 
+interface WordResult {
+  wordId: string
+  isCorrect: boolean
+}
+
 interface QuizResults {
   correct: number
   total: number
   xpEarned: number
+  wordResults: WordResult[]
 }
 
 interface SessionResponse {
@@ -26,24 +32,29 @@ export default function QuizPage() {
   const router = useRouter()
 
   const level = parseInt(searchParams.get('level') ?? '1')
-  const count = parseInt(searchParams.get('count') ?? '10')
+  const defaultCount = parseInt(searchParams.get('count') ?? '10')
 
+  const [sessionCount, setSessionCount] = useState(defaultCount)
+  const [started, setStarted] = useState(false)
   const [exercises, setExercises] = useState<Exercise[]>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [showPinyin, setShowPinyin] = useState(true)
   const [results, setResults] = useState<QuizResults | null>(null)
   const [sessionData, setSessionData] = useState<SessionResponse | null>(null)
   const [toastQueue, setToastQueue] = useState<Achievement[]>([])
-  const [startTime] = useState(() => Date.now())
+  const [startTime, setStartTime] = useState(0)
 
   useEffect(() => {
+    if (!started) return
     async function fetchExercises() {
+      setLoading(true)
       try {
-        const res = await fetch(`/api/exercises?level=${level}&count=${count}`)
+        const res = await fetch(`/api/exercises?level=${level}&count=${sessionCount}`)
         if (!res.ok) throw new Error('Failed to fetch exercises')
         const data = await res.json()
         setExercises(data)
+        setStartTime(Date.now())
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error')
       } finally {
@@ -51,7 +62,7 @@ export default function QuizPage() {
       }
     }
     fetchExercises()
-  }, [level, count])
+  }, [level, sessionCount, started])
 
   const handleComplete = useCallback(
     async (quizResults: QuizResults) => {
@@ -72,6 +83,7 @@ export default function QuizPage() {
             wordsStudied: quizResults.total,
             accuracy,
             durationMs,
+            wordResults: quizResults.wordResults,
           }),
         })
         if (res.ok) {
@@ -96,18 +108,8 @@ export default function QuizPage() {
     setResults(null)
     setSessionData(null)
     setToastQueue([])
-    setLoading(true)
     setExercises([])
-    fetch(`/api/exercises?level=${level}&count=${count}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setExercises(data)
-        setLoading(false)
-      })
-      .catch(() => {
-        setError('Failed to fetch exercises')
-        setLoading(false)
-      })
+    setStarted(false)
   }
 
   const accuracy = results
@@ -130,6 +132,71 @@ export default function QuizPage() {
           />
         )}
       </AnimatePresence>
+
+      {/* Pre-quiz: count selector */}
+      {!started && !results && (
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full max-w-sm flex flex-col items-center gap-6"
+        >
+          <div className="text-center">
+            <h1 className="text-2xl font-extrabold text-zinc-900">HSK {level} Practice</h1>
+            <p className="text-sm text-zinc-500 mt-1">Words are chosen based on your progress</p>
+          </div>
+
+          <div className="w-full bg-white rounded-2xl border border-zinc-100 shadow-sm p-6">
+            <p className="text-sm font-semibold text-zinc-700 mb-3">Words per session</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {[5, 10, 20, 30, 50].map((n) => (
+                <button
+                  key={n}
+                  onClick={() => setSessionCount(n)}
+                  className={cn(
+                    'px-4 py-2 rounded-xl text-sm font-semibold border transition-colors',
+                    sessionCount === n
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-zinc-600 border-zinc-200 hover:border-indigo-300'
+                  )}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-3">
+              <input
+                type="range"
+                min={1}
+                max={150}
+                value={sessionCount}
+                onChange={(e) => setSessionCount(parseInt(e.target.value))}
+                className="flex-1 accent-indigo-600"
+              />
+              <span className="w-8 text-sm font-bold text-zinc-700 text-right">{sessionCount}</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 w-full">
+            <button
+              onClick={() => setShowPinyin((v) => !v)}
+              className={cn(
+                'flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold border transition-colors',
+                showPinyin
+                  ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                  : 'bg-zinc-100 border-zinc-200 text-zinc-500'
+              )}
+            >
+              Pinyin: {showPinyin ? 'ON' : 'OFF'}
+            </button>
+            <button
+              onClick={() => setStarted(true)}
+              className="flex-1 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors active:scale-95"
+            >
+              Start →
+            </button>
+          </div>
+        </motion.div>
+      )}
 
       {/* Loading */}
       {loading && (
@@ -161,20 +228,15 @@ export default function QuizPage() {
         <div className="w-full max-w-lg">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <h1 className="text-xl font-bold text-zinc-900">HSK {level} Quiz</h1>
-              <p className="text-sm text-zinc-500 mt-0.5">{count} questions</p>
+              <h1 className="text-xl font-bold text-zinc-900">HSK {level} Practice</h1>
+              <p className="text-sm text-zinc-500 mt-0.5">{sessionCount} words</p>
             </div>
-            <button
-              onClick={() => setShowPinyin((v) => !v)}
-              className={cn(
-                'flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold border transition-colors',
-                showPinyin
-                  ? 'bg-indigo-50 border-indigo-200 text-indigo-700 hover:bg-indigo-100'
-                  : 'bg-zinc-100 border-zinc-200 text-zinc-500 hover:bg-zinc-200'
-              )}
-            >
-              {showPinyin ? 'Pinyin: ON' : 'Pinyin: OFF'}
-            </button>
+            <span className={cn(
+              'rounded-full px-3 py-1 text-xs font-semibold border',
+              showPinyin ? 'bg-indigo-50 border-indigo-200 text-indigo-700' : 'bg-zinc-100 border-zinc-200 text-zinc-400'
+            )}>
+              {showPinyin ? 'Pinyin ON' : 'Pinyin OFF'}
+            </span>
           </div>
           <ExerciseContainer exercises={exercises} onComplete={handleComplete} showPinyin={showPinyin} />
         </div>

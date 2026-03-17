@@ -15,9 +15,14 @@ interface ExerciseWithWord extends Exercise {
   word?: HskWord
 }
 
+interface WordResult {
+  wordId: string
+  isCorrect: boolean
+}
+
 interface ExerciseContainerProps {
   exercises: ExerciseWithWord[]
-  onComplete: (results: { correct: number; total: number; xpEarned: number }) => void
+  onComplete: (results: { correct: number; total: number; xpEarned: number; wordResults: WordResult[] }) => void
   showPinyin?: boolean
 }
 
@@ -30,6 +35,7 @@ export default function ExerciseContainer({ exercises, onComplete, showPinyin = 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
   const [xpEarned, setXpEarned] = useState(0)
+  const [wordResults, setWordResults] = useState<WordResult[]>([])
   const [answered, setAnswered] = useState(false)
   const [lastCorrect, setLastCorrect] = useState<boolean | null>(null)
   const [xpPopups, setXpPopups] = useState<XpPopup[]>([])
@@ -46,6 +52,10 @@ export default function ExerciseContainer({ exercises, onComplete, showPinyin = 
       if (answered) return
       setAnswered(true)
       setLastCorrect(isCorrect)
+
+      if (current.wordId) {
+        setWordResults((prev) => [...prev, { wordId: current.wordId!, isCorrect }])
+      }
 
       if (isCorrect) {
         const xp = getXpForExerciseType(current.type, true)
@@ -73,11 +83,7 @@ export default function ExerciseContainer({ exercises, onComplete, showPinyin = 
 
   function handleNext() {
     if (currentIndex + 1 >= total) {
-      onComplete({
-        correct: correctCount + (lastCorrect ? 0 : 0), // already tracked via handleAnswer
-        total,
-        xpEarned,
-      })
+      onComplete({ correct: correctCount, total, xpEarned, wordResults })
       return
     }
     setCurrentIndex((i) => i + 1)

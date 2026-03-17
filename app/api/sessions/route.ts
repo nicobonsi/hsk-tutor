@@ -10,7 +10,8 @@ export async function POST(request: Request) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await request.json()
-  const { level, mode, xpEarned, wordsStudied, accuracy, durationMs } = body
+  const { level, mode, xpEarned, wordsStudied, accuracy, durationMs, wordResults } = body
+  // wordResults: Array<{ wordId: string; isCorrect: boolean }>
 
   const dbUser = await prisma.user.findUnique({ where: { id: user.id } })
   if (!dbUser) return NextResponse.json({ error: 'User not found' }, { status: 404 })
@@ -18,6 +19,69 @@ export async function POST(request: Request) {
   const session = await prisma.studySession.create({
     data: { userId: user.id, level, mode, xpEarned, wordsStudied, accuracy, durationMs }
   })
+
+  // Update UserWordProgress for each answered word (SRS)
+  if (Array.isArray(wordResults)) {
+    const now = new Date()
+    for (const { wordId, isCorrect } of wordResults as { wordId: string; isCorrect: boolean }[]) {
+      const existing = await prisma.userWordProgress.findUnique({
+        where: { userId_wordId: { userId: user.id, wordId } },
+      })
+
+      if (existing) {
+        const { status, easeFactor, intervalDays, correctCount, incorrectCount } = existing
+        let newStatus = status
+        let newInterval = intervalDays
+        let newEase = easeFactor
+
+        if (isCorrect) {
+          if (status === 'new') { newStatus = 'learning'; newInterval = 1 }
+          else if (status === 'learning') { newStatus = 'reviewing'; newInterval = 3 }
+          else if (status === 'reviewing') { newStatus = 'mastered'; newInterval = 7 }
+          else { newInterval = Math.round(intervalDays * easeFactor) }
+          await prisma.userWordProgress.update({
+            where: { userId_wordId: { userId: user.id, wordId } },
+            data: {
+              status: newStatus,
+              intervalDays: newInterval,
+              easeFactor: newEase,
+              nextReviewAt: new Date(now.getTime() + newInterval * 86400000),
+              correctCount: correctCount + 1,
+              lastSeenAt: now,
+            },
+          })
+        } else {
+          newStatus = status === 'mastered' || status === 'reviewing' ? 'learning' : status
+          newEase = Math.max(1.3, easeFactor - 0.15)
+          await prisma.userWordProgress.update({
+            where: { userId_wordId: { userId: user.id, wordId } },
+            data: {
+              status: newStatus,
+              intervalDays: 1,
+              easeFactor: newEase,
+              nextReviewAt: new Date(now.getTime() + 86400000),
+              incorrectCount: incorrectCount + 1,
+              lastSeenAt: now,
+            },
+          })
+        }
+      } else {
+        // First time seeing this word
+        await prisma.userWordProgress.create({
+          data: {
+            userId: user.id,
+            wordId,
+            status: isCorrect ? 'learning' : 'new',
+            intervalDays: isCorrect ? 1 : 1,
+            nextReviewAt: new Date(now.getTime() + 86400000),
+            correctCount: isCorrect ? 1 : 0,
+            incorrectCount: isCorrect ? 0 : 1,
+            lastSeenAt: now,
+          },
+        })
+      }
+    }
+  }
 
   const newStreak = calculateStreak(dbUser.lastActiveAt, dbUser.streakDays)
   const newXp = dbUser.xp + xpEarned
