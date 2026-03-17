@@ -11,7 +11,7 @@
 |---------|------|--------|------------|
 | v0.1.0 | Initial MVP | ✅ Complete | — |
 | v0.2.0 | SRS loop completion | ✅ Complete | v0.1.0 |
-| v0.3.0 | TBD | Planned | v0.2.0 |
+| v0.3.0 | HSK textbook integration | Planned | v0.2.0 |
 
 ---
 
@@ -44,6 +44,19 @@
 **Known gaps (follow-up items):**
 - Wire full SM-2 algorithm (`lib/srs/sm2.ts`) into sessions API (currently uses simplified hardcoded intervals)
 - Populate or remove the `Exercise` table (currently unused)
+
+---
+
+## v0.3.0 — HSK Textbook Integration 📋
+
+**Status:** Planned — see [Docs/Design/V0.3.0_TEXTBOOK_INTEGRATION.md](Docs/Design/V0.3.0_TEXTBOOK_INTEGRATION.md)
+
+- Lesson data model (Lesson, LessonDialogue, LessonPinyinDrill, LessonCharacter, CultureNote, UserLessonProgress)
+- Lesson-based navigation: `/learn/lessons/hsk[level]/[number]`
+- Tabbed lesson detail: vocabulary, dialogues, grammar, pinyin, characters, culture
+- Lesson quiz mode: SRS quiz scoped to lesson vocabulary
+- Seed data for HSK1 lessons 1–8 (from HSK Standard Course 1 chapters 1–8)
+- Extensible seed architecture for future chapters and HSK2–6
 
 ---
 

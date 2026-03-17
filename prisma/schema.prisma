@@ -25,6 +25,7 @@ model User {
   dailyChallenges    UserDailyChallenge[]
   exerciseLogs       UserExerciseLog[]
   wordProgress       UserWordProgress[]
+  lessonProgress     UserLessonProgress[]
 
   @@map("users")
 }
@@ -43,8 +44,11 @@ model HskWord {
   frequencyRank Int?
   tags          String[]
   createdAt     DateTime           @default(now())
+  lessonId      String?
   exercises     Exercise[]
   wordProgress  UserWordProgress[]
+  characters    LessonCharacter[]
+  lesson        Lesson?            @relation(fields: [lessonId], references: [id])
 
   @@map("hsk_words")
 }
@@ -59,7 +63,9 @@ model GrammarPoint {
   pattern      String?
   relatedWords String[]
   orderInLevel Int
+  lessonId     String?
   exercises    Exercise[]
+  lesson       Lesson?    @relation(fields: [lessonId], references: [id])
 
   @@map("grammar_points")
 }
@@ -70,6 +76,7 @@ model Exercise {
   level         Int
   wordId        String?
   grammarId     String?
+  lessonId      String?
   prompt        Json
   correctAnswer String
   distractors   String[]
@@ -79,6 +86,7 @@ model Exercise {
   tags          String[]
   grammar       GrammarPoint?     @relation(fields: [grammarId], references: [id])
   word          HskWord?          @relation(fields: [wordId], references: [id])
+  lesson        Lesson?           @relation(fields: [lessonId], references: [id])
   logs          UserExerciseLog[]
   challenges    DailyChallenge[]  @relation("ChallengeExercises")
 
@@ -195,4 +203,87 @@ model LeaderboardSnapshot {
 
   @@unique([userId, period, periodKey])
   @@map("leaderboard_snapshots")
+}
+
+model Lesson {
+  id            String               @id @default(uuid())
+  level         Int
+  lessonNumber  Int
+  title         String
+  titlePinyin   String
+  subtitle      String
+  objectives    String[]
+  createdAt     DateTime             @default(now())
+  words         HskWord[]
+  dialogues     LessonDialogue[]
+  grammarPoints GrammarPoint[]
+  pinyinDrills  LessonPinyinDrill[]
+  characters    LessonCharacter[]
+  cultureNote   CultureNote?
+  exercises     Exercise[]
+  userProgress  UserLessonProgress[]
+
+  @@unique([level, lessonNumber])
+  @@map("lessons")
+}
+
+model LessonDialogue {
+  id             String @id @default(uuid())
+  lessonId       String
+  dialogueNumber Int
+  title          String?
+  turns          Json
+  lesson         Lesson @relation(fields: [lessonId], references: [id])
+
+  @@map("lesson_dialogues")
+}
+
+model LessonPinyinDrill {
+  id       String @id @default(uuid())
+  lessonId String
+  type     String
+  content  Json
+  order    Int
+  lesson   Lesson @relation(fields: [lessonId], references: [id])
+
+  @@map("lesson_pinyin_drills")
+}
+
+model LessonCharacter {
+  id                    String   @id @default(uuid())
+  lessonId              String
+  character             String
+  wordId                String?
+  strokeCount           Int?
+  strokeOrderUrl        String?
+  componentsExplanation String?
+  order                 Int
+  lesson                Lesson   @relation(fields: [lessonId], references: [id])
+  word                  HskWord? @relation(fields: [wordId], references: [id])
+
+  @@map("lesson_characters")
+}
+
+model CultureNote {
+  id       String  @id @default(uuid())
+  lessonId String  @unique
+  title    String
+  content  String
+  imageUrl String?
+  lesson   Lesson  @relation(fields: [lessonId], references: [id])
+
+  @@map("culture_notes")
+}
+
+model UserLessonProgress {
+  id          String    @id @default(uuid())
+  userId      String
+  lessonId    String
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson      Lesson    @relation(fields: [lessonId], references: [id])
+
+  @@unique([userId, lessonId])
+  @@map("user_lesson_progress")
 }

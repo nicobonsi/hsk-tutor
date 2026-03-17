@@ -8,10 +8,13 @@ export async function GET(request: NextRequest) {
 
   const level = parseInt(request.nextUrl.searchParams.get('level') ?? '1')
   const count = Math.min(parseInt(request.nextUrl.searchParams.get('count') ?? '10'), 200)
+  const lessonId = request.nextUrl.searchParams.get('lessonId') ?? undefined
   const now = new Date()
 
+  const wordFilter = lessonId ? { lessonId } : { level }
+
   const allWords = await prisma.hskWord.findMany({
-    where: { level },
+    where: wordFilter,
     select: { id: true, simplified: true, traditional: true, pinyin: true, definitions: true, tags: true, level: true },
   })
 

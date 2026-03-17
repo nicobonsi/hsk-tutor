@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await request.json()
-  const { level, mode, xpEarned, wordsStudied, accuracy, durationMs, wordResults } = body
+  const { level, mode, xpEarned, wordsStudied, accuracy, durationMs, wordResults, lessonId } = body
   // wordResults: Array<{ wordId: string; isCorrect: boolean }>
 
   const dbUser = await prisma.user.findUnique({ where: { id: user.id } })
@@ -92,6 +92,31 @@ export async function POST(request: Request) {
   })
 
   // Check achievements
+  // Update UserLessonProgress if this was a lesson quiz
+  if (lessonId) {
+    await prisma.userLessonProgress.upsert({
+      where: { userId_lessonId: { userId: user.id, lessonId } },
+      create: { userId: user.id, lessonId },
+      update: {},
+    })
+
+    // Mark complete if all lesson words have been attempted
+    const lessonWordIds = (
+      await prisma.hskWord.findMany({ where: { lessonId }, select: { id: true } })
+    ).map(w => w.id)
+
+    const attemptedCount = await prisma.userWordProgress.count({
+      where: { userId: user.id, wordId: { in: lessonWordIds } },
+    })
+
+    if (attemptedCount >= lessonWordIds.length && lessonWordIds.length > 0) {
+      await prisma.userLessonProgress.update({
+        where: { userId_lessonId: { userId: user.id, lessonId } },
+        data: { completedAt: new Date() },
+      })
+    }
+  }
+
   const [masteredCount, totalSessions, earnedAchievements] = await Promise.all([
     prisma.userWordProgress.count({ where: { userId: user.id, status: 'mastered' } }),
     prisma.studySession.count({ where: { userId: user.id } }),

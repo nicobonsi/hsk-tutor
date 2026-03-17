@@ -11,6 +11,7 @@ import {
   User,
   Flame,
   LogOut,
+  GraduationCap,
 } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 import { createClient } from '@/lib/supabase/client'
@@ -28,6 +29,7 @@ interface SidebarProps {
 
 const NAV_LINKS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/lessons', label: 'Lessons', icon: GraduationCap },
   { href: '/learn', label: 'Learn', icon: BookOpen },
   { href: '/practice/quiz', label: 'Practice', icon: Zap },
   { href: '/practice/quiz', label: 'Daily Challenge', icon: Trophy },

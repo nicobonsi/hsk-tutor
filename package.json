@@ -10,6 +10,7 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
+    "db:seed-lessons": "tsx prisma/seed/seed-lessons.ts",
     "db:studio": "prisma studio",
     "typecheck": "tsc --noEmit"
   },
