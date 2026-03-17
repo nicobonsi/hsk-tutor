@@ -144,7 +144,7 @@ function DialoguesTab({ dialogues }: { dialogues: Dialogue[] }) {
       {dialogues.map((d) => (
         <div key={d.id}>
           {d.title && <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{d.title}</h3>}
-          <DialogueViewer turns={d.turns as Turn[]} />
+          <DialogueViewer turns={d.turns as { speaker: string; chinese: string; pinyin: string; english: string }[]} />
         </div>
       ))}
     </div>
