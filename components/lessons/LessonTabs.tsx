@@ -44,13 +44,14 @@ type Character = {
   character: string
   strokeCount: number | null
   componentsExplanation: string | null
-  word: { pinyin: string } | null
+  word?: { pinyin: string } | null
 }
 
 type CultureNote = {
   id: string
   title: string
   content: string
+  imageUrl?: string | null
 }
 
 type Lesson = {

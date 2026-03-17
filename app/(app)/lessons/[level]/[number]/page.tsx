@@ -111,7 +111,7 @@ export default async function LessonDetailPage({
       )}
 
       {/* Tabbed content */}
-      <LessonTabs lesson={lesson as any} />
+      <LessonTabs lesson={lesson} />
 
       {/* Prev / Next navigation */}
       <div className="flex justify-between items-center mt-10 pt-6 border-t border-gray-100">
